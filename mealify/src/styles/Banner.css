@@ -11,4 +11,36 @@
   margin-left: auto; 
   margin-right: auto; 
   margin-top: 20px; 
+  display: flex;
+}
+
+.div-search-input {
+  width: 50%; 
+  justify-content: center; 
+  margin-left: auto; 
+  margin-right: auto; 
+  display: flex; 
+  margin-top: 15px; 
+  margin-bottom: 15px; 
+  background-color: #e3e3e3; 
+  border-radius: 40px; 
+}
+
+.search-input {
+  margin-right: auto; 
+  border: none; 
+  background-color: #e3e3e3; 
+  outline: none; 
+  font-size: 22px; 
+}
+
+.search-input::placeholder{
+  margin-top: 10px; 
+  color: #888; /* Changer la couleur du texte du placeholder */
+  font-style: italic; /* Appliquer une style italique */
+  font-size: 22px; /* Modifier la taille de la police */
+}
+
+.search-logo{
+ margin: auto 10px auto 20px; 
 }
