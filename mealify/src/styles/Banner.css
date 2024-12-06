@@ -12,7 +12,19 @@
   margin-right: auto; 
   margin-top: 20px; 
   display: flex;
+  position: relative;
 }
+
+.div-logo::after {
+  content: "";
+  position: absolute;
+  bottom: -30px; /* Décale le trait un peu en dessous */
+  left: -26%;
+  width: 100vw; /* Utilise 100% de la largeur de l'écran */
+  height: 1px; /* Définir la hauteur du trait */
+  background-color: #e3e3e3; /* Couleur du trait */
+}
+
 
 .div-search-input {
   width: 50%; 
