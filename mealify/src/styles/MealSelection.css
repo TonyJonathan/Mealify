@@ -1,11 +1,43 @@
+
 .container {
-  width: 66%; 
-  margin: 0px auto 0px auto; 
-  display: flex; 
-  gap: 30px; 
-  box-sizing: border-box; 
+  max-width: 1901px; /* 1 = peut grandir, 1 = peut rétrécir, 1901px = taille de base */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.mealContainer {
+  flex: 0 1 452.5px  
+
 }
 
 .mealTitle {
   font-size: clamp(16px, 2vw, 40px);
 }
+
+.nutritionalValuesContainer {
+  display: flex; 
+  flex-wrap: wrap; 
+}
+
+@media (max-width: 2016px){
+  .container{
+    max-width: 1418px; 
+  }
+}
+
+@media (max-width: 1545px){
+  .container{
+    max-width: 936px; 
+  }
+}
+
+@media (max-width: 1062px){
+  .container{
+    max-width: 453px; 
+  }
+}
+
+
