@@ -8,28 +8,75 @@
   flex-wrap: wrap;
 }
 
+.container img {
+  width: 100%;  /* L'image prendra toute la largeur de la div */
+  height: auto; /* L'image garde ses proportions */
+}
+
 .mealContainer {
   flex: 0 1 452.5px  
 
 }
 
 .mealTitle {
-  font-size: clamp(16px, 2vw, 40px);
+  font-size: 36px; 
+  font-weight: 600; 
+  margin: 15px 0; 
 }
 
 .nutritionalValuesContainer {
   display: flex; 
+  justify-content: space-between;
   flex-wrap: wrap; 
+} 
+
+.nutritionalValues {
+  width: 201px; 
+  padding: 30px 10px; 
+  text-align: center; 
+  background-color: #eeeeee; 
+  gap: 10px; 
+  margin: 0 0 10px 0; 
+  font-size: 22px
 }
+
+.addMeal {
+  flex: 1 1 110px; 
+  text-align: center; 
+  background-color: black; 
+  color: white; 
+  padding: 20px 10px; 
+  font-size: 24px; 
+  margin: 10px 0 30px 0px; 
+}
+
+
+
+
 
 @media (max-width: 2016px){
   .container{
-    max-width: 1418px; 
+    margin: 0 150px
+  }
+}
+
+@media (max-width: 1743px){
+  .container{
+    margin: 0 auto; 
+    max-width: 1419px; 
   }
 }
 
 @media (max-width: 1545px){
   .container{
+    margin: 0 150px; 
+    
+  }
+}
+
+@media (max-width: 1262px){
+  .container{
+    margin: 0 auto; 
     max-width: 936px; 
   }
 }
@@ -39,5 +86,14 @@
     max-width: 453px; 
   }
 }
+
+@media (max-width: 579px) {
+  .container{
+    margin: 0 auto; 
+    width: 90%; 
+  }
+
+}
+
 
 
