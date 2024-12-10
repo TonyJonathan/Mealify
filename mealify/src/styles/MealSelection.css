@@ -8,9 +8,10 @@
   flex-wrap: wrap;
 }
 
-.container img {
-  width: 100%;  /* L'image prendra toute la largeur de la div */
-  height: auto; /* L'image garde ses proportions */
+.mealContainer > :first-child {
+  width: 100%; 
+  height: auto;
+  border-radius: 8px; 
 }
 
 .mealContainer {
@@ -22,6 +23,7 @@
   font-size: 36px; 
   font-weight: 600; 
   margin: 15px 0; 
+  text-align: center; 
 }
 
 .nutritionalValuesContainer {

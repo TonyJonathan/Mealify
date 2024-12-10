@@ -2,6 +2,10 @@ import { MealList } from "../datas/MealList";
 import "../styles/MealSelection.css"
 import React, { useState } from "react";
 import Modal from "./Modal";
+import "../styles/Modal.css"
+import preparation from "../assets/icons/preparation.svg"
+import cooking from "../assets/icons/cooking.svg"
+import calories from "../assets/icons/calories.svg"
 
 function MealSelection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -16,7 +20,27 @@ function MealSelection() {
             </img>
             <div>
               <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-
+                <img src={meal.cover} alt={meal.name}></img>
+                <p className="mealTitle">{meal.name}</p>
+                <p className="description">{meal.description}</p>
+                <div className="div-informations">
+                  <div className="informations">
+                    <img src={preparation} alt="knife" width="45px" height="45px"></img>
+                    <p className="informations-text">{meal.preparationTime}</p>
+                    <p className="informations-text">Préparation</p>
+                  </div>
+                  <div className="informations">
+                    <img src={cooking} alt="knife" width="45px" height="45px"></img>
+                    <p className="informations-text">{meal.cookingTime}</p>
+                    <p className="informations-text">Cuisson</p>
+                  </div>
+                  <div className="informations">
+                    <img src={calories} alt="knife" width="45px" height="45px"></img>
+                    <p className="informations-text">{meal.kcal} kcal</p>
+                    <p className="informations-text">Par portion</p>
+                  </div>
+                </div>
+        
               </Modal>
             </div>
             <p className="mealTitle">{meal.name}</p>
