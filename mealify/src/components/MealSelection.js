@@ -6,6 +6,9 @@ import "../styles/Modal.css"
 import preparation from "../assets/icons/preparation.svg"
 import cooking from "../assets/icons/cooking.svg"
 import calories from "../assets/icons/calories.svg"
+import cuterly from "../assets/icons/cuterly.svg"
+import selector from "../assets/icons/selector.svg"
+import Dropdown from "./Dropdown"
 
 function MealSelection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -40,7 +43,10 @@ function MealSelection() {
                     <p className="informations-text">Par portion</p>
                   </div>
                 </div>
-        
+                <div className="div-ingredients-title">
+                  <p className="ingredients-title">Ingrédients</p>
+                  <Dropdown />
+                </div>
               </Modal>
             </div>
             <p className="mealTitle">{meal.name}</p>

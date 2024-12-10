@@ -1,0 +1,24 @@
+.custom-dropdown {
+  width: 50px; 
+  font-size:  32px; 
+  background-color: white; 
+  color: #f44831; 
+  border: none; 
+  outline: none; 
+  -webkit-appearance: none;
+  text-align: center; 
+  cursor: pointer;
+}
+
+.div-dropdown {
+  fill: #f44831; 
+  position: absolute; 
+  top: 50%; 
+  right:0; 
+  transform: translateY(-50%);
+  padding-right: 30px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  cursor: pointer;
+}
