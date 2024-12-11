@@ -14,30 +14,45 @@
 .modal-content {
   background: white;
   border-radius: 8px;
-  width: 720px; 
-  position: relative;
+  width: 720px; /* Largeur fixe ou ajustable */
+  height: 80vh; /* 80% de la hauteur de l'écran */
+  position: relative; /* Nécessaire pour positionner l'élément sticky par rapport au modal */
+  overflow-y: auto; /* Barre de défilement pour le contenu */
+  padding: 0; /* Pas d'espace entre le haut du modal et le contenu */
+  box-sizing: border-box; /* S'assurer que le padding ne modifie pas la taille totale */
+}
+
+.modal-close {
+  position: sticky; /* Le bouton reste visible pendant le défilement */
+  top: 40px; /* Positionné au sommet du modal, sans espace */
+  margin-left: auto;  /* Centré horizontalement par rapport au modal */
+  margin-right: 20px; 
+  background: none;
+  border: none;
+  font-size: 50px;
+  cursor: pointer;
+  color: black;
+  background-color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%; /* Style circulaire */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10; /* Assure que le bouton reste au-dessus du contenu */
+  margin-top: -70px; 
+}
+
+.modal-close:hover {
+  background-color: #f44831; /* Couleur de fond au survol */
+  color: white; /* Couleur du texte au survol */
+  transition: background-color 0.75s ease;
 }
 
 .modal-content > :nth-child(2) {
   padding: 10px;
   width: calc(100% - 20px); 
   border-radius: 20px; 
-}
-
-.modal-close {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  background: none;
-  border: none;
-  font-size: 50px;
-  cursor: pointer;
-  color: black; 
-  background-color: white; 
-  width: 70px; 
-  margin: 0; 
-  padding: 6.5px 0; 
-  border-radius: 35px; 
 }
 
 .description {
