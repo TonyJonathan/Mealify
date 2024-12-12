@@ -11,7 +11,9 @@ const unityConversion = {
   "g": "kg"
 }
 
-function Conversion(number, quantity) {
+function Conversion(number, quantity, servingsNumber) {
+  number = number * servingsNumber; 
+
   if (number < 1)
   {
     return decimalConversion[number]
@@ -21,7 +23,7 @@ function Conversion(number, quantity) {
     return number; 
   } else if ((number > 999 && quantity === "ml") || (number > 999 && quantity === "g"))
   {
-    return `${number / 100} ${unityConversion[quantity]}`;
+    return `${number / 1000} ${unityConversion[quantity]}`;
   } else
   {
     return `${number} ${quantity}`; 

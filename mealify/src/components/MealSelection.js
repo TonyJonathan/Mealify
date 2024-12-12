@@ -7,7 +7,7 @@ import "../styles/Modal.css"
 
 function MealSelection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const [servingsNumber, setServingsNumber] = useState(2);
   return (
       <div className="container">
         {MealList.map((meal) => 
@@ -17,7 +17,7 @@ function MealSelection() {
               onClick={() => setIsModalOpen(true)}>
             </img>
             <div>
-              <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} meal={meal} />
+              <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} meal={meal}  servingsNumber={servingsNumber} setServingsNumber={setServingsNumber} />
             </div>
             <p className="mealTitle">{meal.name}</p>
             <div className="nutritionalValuesContainer">

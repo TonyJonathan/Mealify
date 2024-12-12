@@ -5,15 +5,18 @@ import cooking from "../assets/icons/cooking.svg"
 import calories from "../assets/icons/calories.svg"
 import Dropdown from "./Dropdown"
 import Ingredients from "./Ingredients"
-import Conversion from "./Conversion";
+import Conversion from "./Conversion"
 
-function Modal({ isOpen, onClose, meal }) {
-  if (!isOpen) return null; // Ne pas afficher si `isOpen` est faux
 
+function Modal({ isOpen, onClose, meal, servingsNumber, setServingsNumber }) {
+   
+
+  if (!isOpen) return null; 
+ 
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose}>
+        <button className="modal-close" onClick={() => {onClose(); setServingsNumber(1);}}>
           ×
         </button>
         <img src={meal.cover} alt={meal.name}></img>
@@ -38,21 +41,17 @@ function Modal({ isOpen, onClose, meal }) {
                 </div>
                 <div className="div-ingredients-title">
                   <p className="ingredients-title">Ingrédients</p>
-                  <Dropdown />
+                  <Dropdown servingsNumber={servingsNumber} setServingsNumber={setServingsNumber} />
                 </div>
                 <div className="div-ingredients">
                   {meal.ingredients.map((ingredient) => 
                     <div className="div-individual-ingredient">
                       <img src={Ingredients[ingredient[0]]} alt=""></img>
-                      <p>{Conversion(ingredient[1], ingredient[2])}</p>
+                      <p>{Conversion(ingredient[1], ingredient[2], servingsNumber)}</p>
                       <p>{ingredient[0]}</p>
                     </div>
                   )}
                 </div>
-
-
-
-
       </div>
     </div>
   );
