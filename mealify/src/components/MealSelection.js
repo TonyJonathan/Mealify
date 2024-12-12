@@ -10,6 +10,7 @@ import cuterly from "../assets/icons/cuterly.svg"
 import selector from "../assets/icons/selector.svg"
 import Dropdown from "./Dropdown"
 import Ingredients from "./Ingredients"
+import Conversion from "./Conversion";
 
 function MealSelection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -52,7 +53,7 @@ function MealSelection() {
                   {meal.ingredients.map((ingredient) => 
                     <div className="div-individual-ingredient">
                       <img src={Ingredients[ingredient[0]]} alt=""></img>
-                      <p>{ingredient[1]} {ingredient[2]}</p>
+                      <p>{Conversion(ingredient[1], ingredient[2])}</p>
                       <p>{ingredient[0]}</p>
                     </div>
                   )}
