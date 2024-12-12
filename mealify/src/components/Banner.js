@@ -7,12 +7,13 @@ function Banner() {
     <>
       <h1 className="top-banner">Votre menu de la semaine en un clic !</h1>
       <div className="div-logo">
-        <img src={logo} alt="mealify"></img>
+        <img src={logo} alt="mealify" width="175px"></img>
         <div className="div-search-input">
-          <img src={searchLogo} alt="search logo" width="30px" height="30px" className="search-logo"></img>
+          <img src={searchLogo} alt="search logo" width="20px" height="20px" className="search-logo"></img>
           <input type="text" placeholder="Rechercher..." className="search-input"></input>
         </div>
       </div>
+      <div className="line"></div>
     </>
   )
 }

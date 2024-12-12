@@ -1,26 +1,26 @@
 
 .container {
-  max-width: 1901px; /* 1 = peut grandir, 1 = peut rétrécir, 1901px = taille de base */
+  max-width: 1267.2px;; 
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  gap: 30px;
   flex-wrap: wrap;
+  gap: 20px; 
 }
 
 .mealContainer > :first-child {
-  width: 100%; 
+  width: 301.8px; 
   height: auto;
   border-radius: 8px; 
 }
 
 .mealContainer {
-  flex: 0 1 452.5px  
+  flex: 0 1 295px  
 
 }
 
 .mealTitle {
-  font-size: 36px; 
+  font-size: 24px; 
   font-weight: 600; 
   margin: 15px 0; 
   text-align: center; 
@@ -33,13 +33,12 @@
 } 
 
 .nutritionalValues {
-  width: 201px; 
-  padding: 30px 10px; 
+  width: 127.4px; 
+  padding: 14px 10px; 
   text-align: center; 
   background-color: #eeeeee; 
-  gap: 10px; 
-  margin: 0 0 10px 0; 
-  font-size: 22px
+  margin: 0 0 7px 0; 
+  font-size: 14px
 }
 
 .addMeal {
@@ -47,52 +46,53 @@
   text-align: center; 
   background-color: black; 
   color: white; 
-  padding: 20px 10px; 
-  font-size: 24px; 
-  margin: 10px 0 30px 0px; 
+  padding: 7px 10px; 
+  font-size: 16px; 
+  margin: 5px 0 30px 0px; 
+}
+
+@media (max-width: 1351px){
+  .container {
+    max-width: 1267.2px;; 
+    margin: 0 40px;
+  }
 }
 
 
-@media (max-width: 2016px){
+@media (max-width: 1350px){
   .container{
     margin: 0 150px
   }
 }
 
-@media (max-width: 1743px){
+ @media (max-width: 1263px){
   .container{
     margin: 0 auto; 
-    max-width: 1419px; 
+    max-width: 946px; 
   }
 }
 
-@media (max-width: 1545px){
+@media (max-width: 1043px){
   .container{
     margin: 0 150px; 
     
   }
 }
 
-@media (max-width: 1262px){
+@media (max-width: 941px){
   .container{
     margin: 0 auto; 
-    max-width: 936px; 
+    max-width: 624px; 
   }
 }
 
-@media (max-width: 1062px){
+@media (max-width: 680px){
   .container{
-    max-width: 453px; 
+    max-width: 301.8px; 
   }
 }
 
-@media (max-width: 579px) {
-  .container{
-    margin: 0 auto; 
-    width: 90%; 
-  }
 
-}
 
 
 

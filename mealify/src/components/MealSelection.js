@@ -13,7 +13,7 @@ function MealSelection() {
         {MealList.map((meal) => 
 
           <div className="mealContainer">
-            <img src={meal.cover} alt={meal.name} width="452.5px"
+            <img src={meal.cover} alt={meal.name} width="252.5px"
               onClick={() => setIsModalOpen(true)}>
             </img>
             <div>
