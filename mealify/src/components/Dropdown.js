@@ -1,6 +1,4 @@
-import react from 'react'
 import "../styles/Dropdown.css"
-import { useState} from 'react'
 
 function Dropdown({servingsNumber, setServingsNumber}) {
   const optionsNumber = 11; 
