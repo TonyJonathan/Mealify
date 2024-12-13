@@ -1,17 +1,27 @@
 import "../styles/Selection.css"
+import React, { useState } from "react"
 
 function Selection() {
+  const [activeButton, setActiveButton] = useState(null);
+  const buttons = ["VIANDES 🥩", "POISSON 🐠", "VÉGÉ 🥗", "< 660KCAL 📉"]; 
   return (
     <>
     <div className="selectionList">
-      <div className="selection">VIANDES 🥩</div>
-      <div className="selection">POISSON 🐠</div>
-      <div className="selection">VÉGÉ 🥗</div>
-      <div className="selection"> &lt; 660KCAL 📉</div>
+    {buttons.map((label, index) => (
+      <button
+        key={index}
+        className={`selection ${activeButton === index ? "active" : ""}`}
+        onClick={() => setActiveButton(index)}
+        onBlur={() => setActiveButton(null)}
+      >
+        {label}
+      </button>
+    ))}
     </div>
-    <div className="separationLine"></div>
-    </>
-  )
+      <div className="separationLine"></div>
+      </>
+);
 }
+
 
 export default Selection
