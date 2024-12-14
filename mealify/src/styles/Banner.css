@@ -27,6 +27,10 @@ body {
   position: relative;
 }
 
+.div-logo > img {
+  width: 175px; 
+}
+
 .line {
   width: 100vw; /* Utilise 100% de la largeur de l'écran */
   height: 1px; /* Définir la hauteur du trait */
@@ -67,6 +71,7 @@ body {
 
 .search-logo{
  margin: auto 10px auto 0px; 
+ width: 20px;
 }
 
 @media (max-width: 1352px) {
@@ -76,4 +81,62 @@ body {
     display: flex;
     position: relative;
   }
+}
+
+@media (max-width: 600px){
+  .top-banner {
+    font-size: 15px; 
+    padding: 15px; 
+  }
+
+  .div-logo {
+    max-width: 1267.2px; 
+    margin: auto;  
+    display: block;
+    position: relative;
+    justify-content : center; 
+    align-item: center; 
+    text-align: center;
+  }
+
+  .div-logo > img {
+    width: 120px; 
+    margin: 10px auto 0px auto; 
+  }
+
+  .div-search-input {
+    width: 70%; 
+    justify-content: center; 
+    margin-left: auto; 
+    margin-right: auto; 
+    display: flex; 
+    margin-top: 15px; 
+    margin-bottom: 15px; 
+    background-color: #e3e3e3; 
+    border-radius: 40px; 
+    padding-left: 13px; 
+  }
+
+  .search-input {
+    margin-right: auto; 
+    font-size: 12px; 
+    flex-grow: 1 - 20px;
+    padding: 11px 0px; 
+  }
+
+  .search-input::placeholder{
+    margin-top: 10px; 
+    color: #888; 
+    font-style: italic; 
+    font-size: 12px; 
+  }
+  
+  .search-logo{
+   margin: auto 10px auto 0px; 
+   width: 15px; 
+  }
+
+  .line {
+    display: none; 
+  }  
 }
