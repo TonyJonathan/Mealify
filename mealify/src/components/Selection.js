@@ -4,7 +4,7 @@ import React, { useState } from "react"
 function Selection() {
   const [activeSelection, setActiveSelection] = useState("TOUS 🍽️");
   const buttons = ["TOUS 🍽️", "VIANDES 🥩", "POISSON 🐠", "VÉGÉ 🥗"]; 
-  const selectOptions = [<option key="0">Tous les plats</option>]; 
+  const selectOptions = []; 
   for (let i = 0; i < buttons.length; i++){
     selectOptions.push(<option key={i + 1}>{buttons[i]}</option>)
   }
@@ -22,7 +22,13 @@ function Selection() {
       </button>
     ))}
       </div>
-      <select value={activeSelection} onChange={(e) => setActiveSelection(e.target.value)}>{selectOptions}</select>
+      <select
+        value={activeSelection}
+        onChange={(e) => setActiveSelection(e.target.value)}
+        className="select"
+      >
+        {selectOptions}
+      </select>
       <div className="separationLine"></div>
       </>
 );
