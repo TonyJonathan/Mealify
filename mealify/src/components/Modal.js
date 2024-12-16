@@ -24,17 +24,17 @@ function Modal({ isOpen, onClose, meal, servingsNumber, setServingsNumber }) {
                 <p className="description">{meal.description}</p>
                 <div className="div-informations">
                   <div className="informations">
-                    <img src={preparation} alt="knife" width="45px" height="45px"></img>
+                    <img src={preparation} alt="knife" width="32px" height="32px"></img>
                     <p className="informations-text">{meal.preparationTime}</p>
                     <p className="informations-text">Préparation</p>
                   </div>
                   <div className="informations">
-                    <img src={cooking} alt="knife" width="45px" height="45px"></img>
+                    <img src={cooking} alt="knife" width="32px" height="32px"></img>
                     <p className="informations-text">{meal.cookingTime}</p>
                     <p className="informations-text">Cuisson</p>
                   </div>
                   <div className="informations">
-                    <img src={calories} alt="knife" width="45px" height="45px"></img>
+                    <img src={calories} alt="knife" width="32px" height="32px"></img>
                     <p className="informations-text">{meal.kcal} kcal</p>
                     <p className="informations-text">Par portion</p>
                   </div>

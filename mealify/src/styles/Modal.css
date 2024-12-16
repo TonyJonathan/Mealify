@@ -14,7 +14,7 @@
 .modal-content {
   background: white;
   border-radius: 8px;
-  width: 720px; /* Largeur fixe ou ajustable */
+  width: 480px; /* Largeur fixe ou ajustable */
   height: 80vh; /* 80% de la hauteur de l'écran */
   position: relative; /* Nécessaire pour positionner l'élément sticky par rapport au modal */
   overflow-y: auto; /* Barre de défilement pour le contenu */
@@ -24,23 +24,23 @@
 
 .modal-close {
   position: sticky; /* Le bouton reste visible pendant le défilement */
-  top: 40px; /* Positionné au sommet du modal, sans espace */
+  top: 20px; /* Positionné au sommet du modal, sans espace */
   margin-left: auto;  /* Centré horizontalement par rapport au modal */
-  margin-right: 20px; 
+  margin-right: 18px; 
   background: none;
   border: none;
-  font-size: 50px;
+  font-size: 35px;
   cursor: pointer;
   color: black;
   background-color: white;
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%; /* Style circulaire */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 10; /* Assure que le bouton reste au-dessus du contenu */
-  margin-top: -70px; 
+  margin-top: -50px; 
 }
 
 .modal-close:hover {
@@ -50,20 +50,21 @@
 }
 
 .modal-content > :nth-child(2) {
-  padding: 10px;
+  padding: 8px;
   width: calc(100% - 20px); 
-  border-radius: 20px; 
+  border-radius: 15px; 
 }
 
 .description {
-  font-size: 24px; 
+  font-size: 16px; 
   text-align: center; 
+  margin: 16px; 
 }
 
 .div-informations{
   display: flex; 
   justify-content: space-between; 
-  padding: 30px 10%; 
+  padding: 24px 10%; 
   margin-top: 30px; 
   background-color: #c6eaf6;  
 }
@@ -73,8 +74,8 @@
 }
 
 .informations-text {
-  font-size: 20px;
-  margin: 10px 0 0 0; 
+  font-size: 14px;
+  margin: 5px 0 0 0; 
 }
 
 .div-ingredients-title {
@@ -85,16 +86,18 @@
 
 .ingredients-title {
   margin: 30px 0px; 
-  font-size: 28px; 
+  font-size: 20px; 
   font-weight: 500; 
 }
 
 .div-ingredients {
   display: flex; 
   flex-wrap: wrap; 
-  justify-content: space-between; 
-  max-width: 561px; 
+  justify-content: center; 
+  max-width: 414px; 
   margin: auto;
+  gap: 15px; 
+  padding: 0px 15px; 
 }
 
 .div-individual-ingredient {
@@ -104,14 +107,14 @@
 }
 
 .div-individual-ingredient > img {
-max-width: 120px; 
+max-width: 78px; 
 border: 1px solid #e9e9e9; 
-border-radius: 60px; 
- 
+border-radius: 50%; 
+text-align: center; 
 }
 
 .div-individual-ingredient > p {
   text-align: center; 
-  font-size: 16px; 
-  width: 120px; 
+  font-size: 14px; 
+  width: 80px; 
 }
