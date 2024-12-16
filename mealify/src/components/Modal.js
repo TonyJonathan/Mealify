@@ -20,38 +20,42 @@ function Modal({ isOpen, onClose, meal, servingsNumber, setServingsNumber }) {
           ×
         </button>
         <img src={meal.cover} alt={meal.name}></img>
-                <p className="mealTitle">{meal.name}</p>
-                <p className="description">{meal.description}</p>
-                <div className="div-informations">
-                  <div className="informations">
-                    <img src={preparation} alt="knife" width="32px" height="32px"></img>
-                    <p className="informations-text">{meal.preparationTime}</p>
-                    <p className="informations-text">Préparation</p>
-                  </div>
-                  <div className="informations">
-                    <img src={cooking} alt="knife" width="32px" height="32px"></img>
-                    <p className="informations-text">{meal.cookingTime}</p>
-                    <p className="informations-text">Cuisson</p>
-                  </div>
-                  <div className="informations">
-                    <img src={calories} alt="knife" width="32px" height="32px"></img>
-                    <p className="informations-text">{meal.kcal} kcal</p>
-                    <p className="informations-text">Par portion</p>
-                  </div>
-                </div>
-                <div className="div-ingredients-title">
-                  <p className="ingredients-title">Ingrédients</p>
-                  <Dropdown servingsNumber={servingsNumber} setServingsNumber={setServingsNumber} />
-                </div>
-                <div className="div-ingredients">
-                  {meal.ingredients.map((ingredient) => 
-                    <div className="div-individual-ingredient">
-                      <img src={Ingredients[ingredient[0]]} alt=""></img>
-                      <p>{Conversion(ingredient[1], ingredient[2], servingsNumber)}</p>
-                      <p>{ingredient[0]}</p>
-                    </div>
-                  )}
-                </div>
+        <p className="mealTitle">{meal.name}</p>
+        <p className="text-sections">{meal.description}</p>
+        <div className="div-informations">
+          <div className="informations">
+            <img src={preparation} alt="knife" width="32px" height="32px"></img>
+            <p className="informations-text">{meal.preparationTime}</p>
+            <p className="informations-text">Préparation</p>
+          </div>
+          <div className="informations">
+            <img src={cooking} alt="knife" width="32px" height="32px"></img>
+            <p className="informations-text">{meal.cookingTime}</p>
+            <p className="informations-text">Cuisson</p>
+          </div>
+          <div className="informations">
+            <img src={calories} alt="knife" width="32px" height="32px"></img>
+            <p className="informations-text">{meal.kcal} kcal</p>
+            <p className="informations-text">Par portion</p>
+          </div>
+        </div>
+        <div className="div-ingredients-title">
+          <p className="title-sections">Ingrédients</p>
+          <Dropdown servingsNumber={servingsNumber} setServingsNumber={setServingsNumber} />
+        </div>
+        <div className="div-ingredients">
+          {meal.ingredients.map((ingredient) => 
+            <div className="div-individual-ingredient" key={ingredient[0]}>
+              <img src={Ingredients[ingredient[0]]} alt={ingredient[0]}></img>
+              <p>{Conversion(ingredient[1], ingredient[2], servingsNumber)}</p>
+              <p>{ingredient[0]}</p>
+            </div>
+           )}
+        </div>
+        <div className="ustensils">
+          <p className="title-sections">Ustensiles</p> 
+          <p className="text-sections">{meal.ustensils}</p>
+        </div>
       </div>
     </div>
   );

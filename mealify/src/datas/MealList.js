@@ -17,7 +17,7 @@ export const MealList = [
     ingredients: [
       ["Pâtes (spaghetti)", 100, "g"],
       ["Parmesan (râpé)", 1, "càs"],
-      ["Boeuf (steack haché frais)", 1],
+      ["Boeuf (steak haché frais)", 1],
       ["Échalote", 0.25],
       ["Sauce tomate", 80, "g"],
       ["Basilic (frais)", 5, "g"],
@@ -51,7 +51,7 @@ export const MealList = [
     ingredients: [
       ["Pâtes (spaghetti)", 100, "g"],
       ["Parmesan (râpé)", 1, "càs"],
-      ["Boeuf (steack haché frais)", 1],
+      ["Boeuf (steak haché frais)", 1],
       ["Échalote", 0.25],
       ["Sauce tomate", 80, "g"],
       ["Basilic (frais)", 5, "g"],
@@ -85,7 +85,7 @@ export const MealList = [
     ingredients: [
       ["Pâtes (spaghetti)", 100, "g"],
       ["Parmesan (râpé)", 1, "càs"],
-      ["Boeuf (steack haché frais)", 1],
+      ["Boeuf (steak haché frais)", 1],
       ["Échalote", 0.25],
       ["Sauce tomate", 80, "g"],
       ["Basilic (frais)", 5, "g"],
@@ -119,7 +119,7 @@ export const MealList = [
     ingredients: [
       ["Pâtes (spaghetti)", 100, "g"],
       ["Parmesan (râpé)", 1, "càs"],
-      ["Boeuf (steack haché frais)", 1],
+      ["Boeuf (steak haché frais)", 1],
       ["Échalote", 0.25],
       ["Sauce tomate", 80, "g"],
       ["Basilic (frais)", 5, "g"],

@@ -11,7 +11,7 @@ import tomatoSauce from "../assets/ingredients/tomatoSauce.webp"
 const ingredients = {
   "Pâtes (spaghetti)": spaghetti, 
   "Parmesan (râpé)": parmesan, 
-  "Boeuf (steack haché frais)": beffSteak, 
+  "Boeuf (steak haché frais)": beffSteak, 
   "Échalote": shallot, 
   "Sauce tomate": tomatoSauce, 
   "Basilic (frais)": basil, 
