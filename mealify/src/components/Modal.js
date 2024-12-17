@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect} from "react";
 import "../styles/Modal.css" // Styles pour le modal
 import preparation from "../assets/icons/preparation.svg"
 import cooking from "../assets/icons/cooking.svg"
@@ -6,10 +6,10 @@ import calories from "../assets/icons/calories.svg"
 import Dropdown from "./Dropdown"
 import Ingredients from "./Ingredients"
 import Conversion from "./Conversion"
+import ingredients from "./Ingredients"
 
 
 function Modal({ isOpen, onClose, meal, servingsNumber, setServingsNumber }) {
-   
 
   if (!isOpen) return null; 
  
@@ -56,6 +56,23 @@ function Modal({ isOpen, onClose, meal, servingsNumber, setServingsNumber }) {
           <p className="title-sections">Ustensiles</p> 
           <p className="text-sections">{meal.ustensils}</p>
         </div>
+        <div>
+          <p className="title-sections">Recette</p>
+          {meal.recipe.map((step, index) => 
+            <div className="step" key={index}>
+              
+              <div className="ingredients-list">
+              {Array.isArray(step[1]) ? (
+                step[1].map((ingredient) => (
+                <img src={ingredients[ingredient]} alt={ingredient} key={ingredient} />
+                ))
+)               : null}
+              
+              </div>
+              
+            </div>
+          )}
+          </div>
       </div>
     </div>
   );
