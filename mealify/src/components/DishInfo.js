@@ -15,12 +15,12 @@ function DishInfo({meal}) {
                 <p className="informations-text">Préparation</p>
               </div>
               <div className="informations">
-                <img src={cooking} alt="knife" width="32px" height="32px"></img>
+                <img src={cooking} alt="saucepan" width="32px" height="32px"></img>
                 <p className="informations-text">{meal.cookingTime}</p>
                 <p className="informations-text">Cuisson</p>
               </div>
               <div className="informations">
-                <img src={calories} alt="knife" width="32px" height="32px"></img>
+                <img src={calories} alt="fire" width="32px" height="32px"></img>
                 <p className="informations-text">{meal.kcal} kcal</p>
                 <p className="informations-text">Par portion</p>
               </div>

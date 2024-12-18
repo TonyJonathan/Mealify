@@ -2,7 +2,7 @@ import Conversion from "./Conversion"
 import Dropdown from "./Dropdown"
 
 
-function IngredientsSection({ servingsNumber, setServingsNumber, meal, Ingredients }) {
+function IngredientsSection({ servingsNumber, setServingsNumber, meal, ingredients }) {
   return (
     <>
       <div className="div-ingredients-title">
@@ -12,7 +12,7 @@ function IngredientsSection({ servingsNumber, setServingsNumber, meal, Ingredien
       <div className="div-ingredients">
         {meal.ingredients.map((ingredient) => 
           <div className="div-individual-ingredient" key={ingredient[0]}>
-            <img src={Ingredients[ingredient[0]]} alt={ingredient[0]}></img>
+            <img src={ingredients[ingredient[0]]} alt={ingredient[0]}></img>
             <p>{Conversion(ingredient[1], ingredient[2], servingsNumber)}</p>
             <p>{ingredient[0]}</p>
           </div>
