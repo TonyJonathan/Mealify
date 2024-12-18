@@ -58,14 +58,13 @@
 .text-sections {
   font-size: 16px; 
   text-align: center; 
-  margin: 16px; 
+  margin: 20px 16px; 
 }
 
 .div-informations{
   display: flex; 
   justify-content: space-between; 
-  padding: 24px 10%; 
-  margin-top: 30px; 
+  padding: 20px 10%; 
   background-color: #c6eaf6;  
 }
 
@@ -104,7 +103,7 @@
 }
 
 .div-individual-ingredient {
-   margin: 0 0 23px 0; 
+   margin: 0 0 20px 0; 
    display: block; 
    box-sizing: border-box;
 }
@@ -114,12 +113,14 @@ max-width: 78px;
 border: 1px solid #e9e9e9; 
 border-radius: 50%; 
 text-align: center; 
+margin-bottom: 10px; 
 }
 
 .div-individual-ingredient > p {
   text-align: center; 
   font-size: 13px; 
   width: 80px; 
+  margin: 0; 
 }
 
 
