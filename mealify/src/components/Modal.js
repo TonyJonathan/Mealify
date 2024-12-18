@@ -24,7 +24,13 @@ function Modal({ isOpen, onClose, meal, servingsNumber, setServingsNumber }) {
           meal={meal}
           ingredients={ingredients}
         />
-      <RecipeSection meal={meal} ingredients={ingredients} />
+        <RecipeSection
+          meal={meal}
+          ingredients={ingredients}
+        />
+        <button className="addButton" onClick={() => {onClose(); setServingsNumber(1);}}>
+          Ajouter {servingsNumber > 1 ? (`x ${servingsNumber}`) : null}
+        </button>
       </div>
     </div>
   );

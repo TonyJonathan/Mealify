@@ -1,7 +1,7 @@
 function RecipeSection({ meal, ingredients }) {
   return (
     <>
-            <div>
+      <div className="recipe-section">
           <p className="title-sections">Recette</p>
           {meal.recipe.map((step, index) => 
             <div className="step" key={index}>

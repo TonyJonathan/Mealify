@@ -151,6 +151,10 @@ margin-bottom: 10px;
   margin-top: -15px;  
 }
 
+.recipe-section {
+  padding: 0 20px; 
+}
+
 .step-number {
   margin: 0;
   color: #6F6F6F; 
@@ -165,4 +169,15 @@ margin-bottom: 10px;
 .step > div:nth-child(2) > .text-sections {
   text-align: left; 
   margin: 0
+}
+
+.addButton {
+  max-width: 300px; 
+  background-color: black; 
+  color: #FFFFFF; 
+  font-size: 16px; 
+  padding: 10px 100px; 
+  margin: 30px auto;
+  border-radius: 25px;  
+  display: block; 
 }
