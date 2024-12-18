@@ -6,6 +6,7 @@ import Conversion from "./Conversion"
 import ingredients from "./Ingredients"
 
 import DishInfo from "./DishInfo";
+import IngredientsSection from "./IngredientsSection";
 
 
 function Modal({ isOpen, onClose, meal, servingsNumber, setServingsNumber }) {
@@ -18,24 +19,15 @@ function Modal({ isOpen, onClose, meal, servingsNumber, setServingsNumber }) {
         <button className="modal-close" onClick={() => {onClose(); setServingsNumber(1);}}>
           ×
         </button>
-        <DishInfo meal={meal} />
-        <div className="div-ingredients-title">
-          <p className="title-sections">Ingrédients</p>
-          <Dropdown servingsNumber={servingsNumber} setServingsNumber={setServingsNumber} />
-        </div>
-        <div className="div-ingredients">
-          {meal.ingredients.map((ingredient) => 
-            <div className="div-individual-ingredient" key={ingredient[0]}>
-              <img src={Ingredients[ingredient[0]]} alt={ingredient[0]}></img>
-              <p>{Conversion(ingredient[1], ingredient[2], servingsNumber)}</p>
-              <p>{ingredient[0]}</p>
-            </div>
-           )}
-        </div>
-        <div className="ustensils">
-          <p className="title-sections">Ustensiles</p> 
-          <p className="text-sections">{meal.ustensils}</p>
-        </div>
+        <DishInfo
+          meal={meal}
+        />
+        <IngredientsSection
+          servingsNumber={servingsNumber}
+          setServingsNumber={setServingsNumber}
+          meal={meal}
+          Ingredients={Ingredients}
+        />
         <div>
           <p className="title-sections">Recette</p>
           {meal.recipe.map((step, index) => 
