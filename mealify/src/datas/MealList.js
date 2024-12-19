@@ -1,5 +1,7 @@
 import meatballs from "../assets/meals/meatballs.png"
 import croqueMonsieur from "../assets/meals/croqueMonsieur.png"
+import codChorizoCream from "../assets/meals/codChorizoCream.png"
+
 
 export const MealList = [
   {
@@ -66,10 +68,45 @@ export const MealList = [
       ["Baissez le feu et laissez mijoter à couvert pendant 8 minutes."], 
       ["Préchauffez le four à 240°C. Mélangez dans un bol les poireaux cuits, la crème, le parmesan et le fromage râpé (gardez en une petite poignée pour la suite).* Salez et poivrez.", ["Poireau", "Crème fraîche", "Parmesan (morceaux)", "Fromage râpé"]], 
       ["Beurrez les tranches de pain de mie d'un seul côté.", ["Beurre", "Pain de mie"]], 
-      ["Beurrez un plat allant au four.", "Beurre"], 
+      ["Beurrez un plat allant au four.", ["Beurre"]], 
       ["Disposez la moitié des tranches côté beurré vers le haut. Ajoutez la farce aux poireaux en réservant une cuillère à soupe par portion."], 
       ["Refermez avec la seconde tranche de pain, côté beurré sur la farce. Ensuite, recouvrez les sandwichs avec le reste de farce aux poireaux et de fromage râpé. "], 
       ["Enfournez pendant 10 minutes à 240°C. Servez avec une salade assaisonnée à votre goût, c'est prêt !", ["Salade (mélange)"]]
+    ]
+  }, 
+
+  {
+    id: 3,
+    name: "Cabillaud à la crème de chorizo & purée",
+    cover: codChorizoCream,
+    description: "Une recette au cabillaud qui fera frémir vos papilles !",
+    nutriscore: "B",
+    preparationTime: "5 minutes",
+    cookingTime: "20 minutes",
+    kcal: "699",
+    proteins: "33g",
+    carbohydrates: "50g",
+    lipids: "42g",
+    ustensils: "Plaques de cuisson, Poêle, Casserole, Mixeur",
+    seasoning: "",
+    ingredients: [
+      ["Cabillaud (frais)", 1],
+      ["Chorizo (entier)", 25, "g"],
+      ["Pommes de terre", 250, "g"],
+      ["Crème liquide", 60, "ml"],
+      ["Beurre", 15, "g"],
+      ["Ciboulette", 5, "g"]
+    ], 
+    recipe: [
+      ["Épluchez les pommes de terre et coupez-les en petits dés.", ["Pommes de terre"]],
+      ["Faites bouillir une casserole d'eau chaude salée, versez-y les pommes de terre et laissez cuire 15 minutes.", ["Pommes de terre"]], 
+      ["Pendant ce temps, préparez la sauce : après avoir retiré la peau du chorizo, détaillez-le en petits dés.", ["Chorizo (entier)"]], 
+      ["Dans une casserole, versez la crème liquide et les dés de chorizo. Faites chauffer jusqu'à début d’ébullition. Couvrez et laissez infuser une dizaine de minutes à feu doux.", ["Crème liquide", "Chorizo (entier)"]], 
+      ["Pendant ce temps émincez finement la ciboulette si vous en avez.", ["Ciboulette"]], 
+      ["Une fois les pommes de terre cuites, égouttez-les puis versez-les dans un récipient et ajoutez le beurre. Salez et poivrez puis écrasez le tout. Ajoutez la ciboulette si vous en avez. Réservez au chaud.", ["Pommes de terre", "Beurre", "Ciboulette"]], 
+      ["Une fois le chorizo bien infusé, mixez le mélange à l'aide d'un mixeur plongeant.", ["Chorizo (entier)"]], 
+      ["Pour finir, faites cuire votre cabillaud 2 minutes de chaque côté dans une poêle avec un filet d'huile d'olive. Salez et poivrez.", ["Cabillaud (frais)"]], 
+      ["Dressez votre assiette en ajoutant la purée, le cabillaud et nappez de sauce au chorizo. S'il vous en reste, ajoutez quelques brins de ciboulette hachés. C'est prêt !"]
     ]
   }
 

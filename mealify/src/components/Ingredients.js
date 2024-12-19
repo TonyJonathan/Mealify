@@ -13,6 +13,11 @@ import freshCream from "../assets/ingredients/freshCream.webp"
 import parmesanChunks from "../assets/ingredients/parmesanChunks.webp"
 import mixedSalad from "../assets/ingredients/mixedSalad.webp"
 import butter from "../assets/ingredients/butter.webp"
+import cod from "../assets/ingredients/cod.webp"
+import chorizo from "../assets/ingredients/chorizo.webp"
+import potatoes from "../assets/ingredients/potatoes.webp"
+import liquidCream from "../assets/ingredients/liquidCream.webp"
+import chives from "../assets/ingredients/chives.webp"
 
 
 
@@ -31,7 +36,12 @@ const ingredients = {
   "Crème fraîche": freshCream,
   "Parmesan (morceaux)": parmesanChunks,
   "Salade (mélange)": mixedSalad,
-  "Beurre": butter
+  "Beurre": butter, 
+  "Cabillaud (frais)": cod, 
+  "Chorizo (entier)": chorizo, 
+  "Pommes de terre": potatoes, 
+  "Crème liquide": liquidCream, 
+  "Ciboulette": chives
 }
 
 export default ingredients
