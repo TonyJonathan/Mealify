@@ -6,18 +6,22 @@ import "../styles/Modal.css"
 
 
 function MealSelection() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [servingsNumber, setServingsNumber] = useState(2);
+  const [openMealId, setOpenMealId] = useState(null);
+  const [servingsNumber, setServingsNumber] = useState(1);
   return (
       <div className="container">
         {MealList.map((meal) => 
 
-          <div className="mealContainer">
+          <div className="mealContainer" key={meal.name}>
             <img src={meal.cover} alt={meal.name} width="252.5px"
-              onClick={() => setIsModalOpen(true)}>
+              onClick={() => setOpenMealId(meal.id)}>
             </img>
             <div>
-              <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} meal={meal}  servingsNumber={servingsNumber} setServingsNumber={setServingsNumber} />
+              {openMealId === meal.id ? (
+                <Modal isOpen={openMealId} onClose={() => setOpenMealId(null)} meal={meal} servingsNumber={servingsNumber} setServingsNumber={setServingsNumber} />
+              )
+                : null
+              }
             </div>
             <p className="mealTitle">{meal.name}</p>
             <div className="nutritionalValuesContainer">

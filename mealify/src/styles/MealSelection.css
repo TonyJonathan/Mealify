@@ -26,6 +26,10 @@
   text-align: center; 
 }
 
+.mealContainer > .mealTitle {
+  font-size: 19px; 
+}
+
 .nutritionalValuesContainer {
   display: flex; 
   justify-content: space-between;
