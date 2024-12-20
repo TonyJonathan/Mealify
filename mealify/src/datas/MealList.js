@@ -1,7 +1,7 @@
 import meatballs from "../assets/meals/meatballs.png"
-import croqueMonsieur from "../assets/meals/croqueMonsieur.png"
+import croqueMonsieurLeek from "../assets/meals/croqueMonsieurLeek.png"
 import codChorizoCream from "../assets/meals/codChorizoCream.png"
-
+import croqueMonsieur from "../assets/meals/croqueMonsieur.png"
 
 export const MealList = [
   {
@@ -42,7 +42,7 @@ export const MealList = [
   {
     id : 2, 
     name: "Croque-monsieur aux poireaux", 
-    cover: croqueMonsieur, 
+    cover: croqueMonsieurLeek, 
     description: "Un croque-monsieur gourmand, les légumes en plus !",
     nutriscore: "A", 
     preparationTime: "10 minutes",
@@ -77,7 +77,7 @@ export const MealList = [
 
   {
     id: 3,
-    name: "Cabillaud à la crème de chorizo & purée",
+    name: "Cabillaud à la crème de chorizo",
     cover: codChorizoCream,
     description: "Une recette au cabillaud qui fera frémir vos papilles !",
     nutriscore: "B",
@@ -107,6 +107,42 @@ export const MealList = [
       ["Une fois le chorizo bien infusé, mixez le mélange à l'aide d'un mixeur plongeant.", ["Chorizo (entier)"]], 
       ["Pour finir, faites cuire votre cabillaud 2 minutes de chaque côté dans une poêle avec un filet d'huile d'olive. Salez et poivrez.", ["Cabillaud (frais)"]], 
       ["Dressez votre assiette en ajoutant la purée, le cabillaud et nappez de sauce au chorizo. S'il vous en reste, ajoutez quelques brins de ciboulette hachés. C'est prêt !"]
+    ]
+  }, 
+
+  {
+    id : 2, 
+    name: "Croque-monsieur au four", 
+    cover: croqueMonsieur, 
+    description: "Un croque-monsieur comme on les aime !",
+    nutriscore: "B", 
+    preparationTime: "6 minutes",
+    cookingTime: "10 minutes", 
+    kcal: "623", 
+    proteins: "34g",
+    carbohydrates: "40g", 
+    lipids: "36g", 
+    ustensils: "Four, plat à gratin.", 
+    seasoning: "", 
+    ingredients: [
+      ["Pain de mie", 2, "tran."],
+      ["Jambon blanc", 1, "tran."],
+      ["Fromage râpé", 60, "g"],
+      ["Crème fraîche", 30, "g"],
+      ["Parmesan (râpé)", 0.5, "càs"],
+      ["Salade (mélange)", 2, "poignée"],
+      ["Beurre demi-sel", 5, "g"]
+    ], 
+    recipe: [
+      ["Préchauffez le four à 240°C. Mélangez dans un bol : la crème, le parmesan, et la moitié du fromage râpé, sel et poivre.", ["Crème fraîche", "Parmesan (râpé)", "Fromage râpé" ]],
+      ["Beurrez les tranches de pain de mie d'un seul côté.", ["Pain de mie","Beurre"]], 
+      ["Beurrez un plat allant au four.", ["Beurre"]], 
+      ["Disposez la moitié des tranches côté beurré vers le haut."], 
+      ["Beurrez les tranches de pain de mie d'un seul côté.", ["Beurre", "Pain de mie"]], 
+      ["Beurrez un plat allant au four.", ["Beurre"]], 
+      ["Disposez la moitié des tranches côté beurré vers le haut",  ["Pain de mie"]], 
+      ["Refermez avec la seconde tranche de pain côté beurré sur le jambon, et recouvrez les sandwichs avec le mélange crème-fromage."], 
+      ["Enfournez pendant 10 minutes à 240°C. Servez avec une salade assaisonnée à votre goût, c'est prêt !", ["Salade (mélange)"]]
     ]
   }
 
