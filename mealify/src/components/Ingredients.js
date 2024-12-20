@@ -18,12 +18,15 @@ import chorizo from "../assets/ingredients/chorizo.webp"
 import potatoes from "../assets/ingredients/potatoes.webp"
 import liquidCream from "../assets/ingredients/liquidCream.webp"
 import chives from "../assets/ingredients/chives.webp"
+import cookedHam from "../assets/ingredients/cookedHam.webp"
+import gratedParmesan from "../assets/ingredients/gratedParmesan.webp"
+
+
 
 
 
 const ingredients = {
-  "Pâtes (spaghetti)": spaghetti, 
-  "Parmesan (râpé)": parmesan, 
+  "Pâtes (spaghetti)": spaghetti,  
   "Boeuf (steak haché frais)": beffSteak, 
   "Échalote": shallot, 
   "Sauce tomate": tomatoSauce, 
@@ -41,7 +44,10 @@ const ingredients = {
   "Chorizo (entier)": chorizo, 
   "Pommes de terre": potatoes, 
   "Crème liquide": liquidCream, 
-  "Ciboulette": chives
+  "Ciboulette": chives, 
+  "Beurre demi-sel": butter, 
+  "Parmesan (râpé)": gratedParmesan, 
+  "Jambon blanc": cookedHam
 }
 
 export default ingredients
