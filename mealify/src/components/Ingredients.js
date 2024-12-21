@@ -21,7 +21,10 @@ import chives from "../assets/ingredients/chives.webp"
 import cookedHam from "../assets/ingredients/cookedHam.webp"
 import gratedParmesan from "../assets/ingredients/gratedParmesan.webp"
 
-
+import roblochon from "../assets/ingredients/roblochon.webp"
+import dicedBacon from "../assets/ingredients/dicedBacon.webp"
+import crozets from "../assets/ingredients/crozets.webp"
+import yellowOnion from "../assets/ingredients/yellowOnion.webp"
 
 
 
@@ -47,7 +50,12 @@ const ingredients = {
   "Ciboulette": chives, 
   "Beurre demi-sel": butter, 
   "Parmesan (râpé)": gratedParmesan, 
-  "Jambon blanc": cookedHam
+  "Jambon blanc": cookedHam,
+  "Roblochon": roblochon, 
+  "Lardons": dicedBacon, 
+  "Crozets": crozets, 
+  "Oignon jaune": yellowOnion
+
 }
 
 export default ingredients

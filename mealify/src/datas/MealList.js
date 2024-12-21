@@ -2,6 +2,7 @@ import meatballs from "../assets/meals/meatballs.png"
 import croqueMonsieurLeek from "../assets/meals/croqueMonsieurLeek.png"
 import codChorizoCream from "../assets/meals/codChorizoCream.png"
 import croqueMonsieur from "../assets/meals/croqueMonsieur.png"
+import croziflette from "../assets/meals/croziflette.png"
 
 export const MealList = [
   {
@@ -111,7 +112,7 @@ export const MealList = [
   }, 
 
   {
-    id : 2, 
+    id : 4, 
     name: "Croque-monsieur au four", 
     cover: croqueMonsieur, 
     description: "Un croque-monsieur comme on les aime !",
@@ -143,6 +144,39 @@ export const MealList = [
       ["Disposez la moitié des tranches côté beurré vers le haut",  ["Pain de mie"]], 
       ["Refermez avec la seconde tranche de pain côté beurré sur le jambon, et recouvrez les sandwichs avec le mélange crème-fromage."], 
       ["Enfournez pendant 10 minutes à 240°C. Servez avec une salade assaisonnée à votre goût, c'est prêt !", ["Salade (mélange)"]]
+    ]
+  },
+
+  {
+    id : 5, 
+    name: "Croziflette", 
+    cover: croziflette, 
+    description: "Remplacez les pommes de terre d'une tartiflette par des crozets au sarrasin, et découvrez la savoureuse croziflette !",
+    nutriscore: "D", 
+    preparationTime: "7 minutes",
+    cookingTime: "35 minutes", 
+    kcal: "694", 
+    proteins: "28g",
+    carbohydrates: "60g", 
+    lipids: "37g", 
+    ustensils: "Plaques de cuisson, Four, Casserole, Passoire, Poêle, Plat à gratin", 
+    seasoning: "", 
+    ingredients: [
+      ["Roblochon", 50, "g"],
+      ["Oignon jaune", 0.25],
+      ["Lardons", 50, "g"],
+      ["Crème fraîche", 1, "càs"],
+      ["Crozets", 80, "g"],
+    ], 
+    recipe: [
+      ["Préchauffez le four à 210°C. Faites cuire les crozets dans une casserole d'eau bouillante pendant 20 minutes.", ["Crozets"]],
+      ["Pendant ce temps, épluchez puis émincez les oignons finement.", ["Oignon jaune"]], 
+      ["Dans une poêle chaude, ajoutez les oignons émincés et les lardons. Faites revenir le tout pendant 10 minutes.", ["Lardons", "Oignon jaune"]], 
+      ["Une fois les crozets cuits, égouttez-les."], 
+      ["Coupez le reblochon en deux.", ["Roblochon"]], 
+      ["Dans un plat à gratin, ajoutez les crozets, la crème fraîche et le mélange lardons/oignons. Salez, poivrez et mélangez bien.", ["Crozets", "Crème fraîche", "Lardons", "Oignon jaune"]], 
+      ["Ajoutez le reblochon par-dessus, puis enfournez 15 minutes à 210°C.",  ["Roblochon"]], 
+      ["Une fois le fromage bien fondu et doré, sortez le plat du four. C'est prêt !"]
     ]
   }
 
