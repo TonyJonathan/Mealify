@@ -10,18 +10,17 @@ function MealSelection() {
   const [servingsNumber, setServingsNumber] = useState(1);
   return (
       <div className="container">
-        {MealList.map((meal) => 
-
-          <div className="mealContainer" key={meal.name}>
-            <img src={meal.cover} alt={meal.name} width="252.5px"
-              onClick={() => setOpenMealId(meal.id)}>
-            </img>
-            <div>
-              {openMealId === meal.id ? (
-                <Modal isOpen={openMealId} onClose={() => setOpenMealId(null)} meal={meal} servingsNumber={servingsNumber} setServingsNumber={setServingsNumber} />
-              )
-                : null
-              }
+      {MealList.map((meal) => 
+        <div className="mealContainer" key={meal.name}>
+          <img src={meal.cover} alt={meal.name} width="252.5px"
+            onClick={() => setOpenMealId(meal.id)}>
+          </img>
+          <div>
+            {openMealId === meal.id ? (
+              <Modal isOpen={openMealId} onClose={() => setOpenMealId(null)} meal={meal} servingsNumber={servingsNumber} setServingsNumber={setServingsNumber} />
+            )
+              : null
+            }
             </div>
             <p className="mealTitle">{meal.name}</p>
             <div className="nutritionalValuesContainer">

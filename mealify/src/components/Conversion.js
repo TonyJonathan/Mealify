@@ -19,7 +19,6 @@ function Conversion(number, quantity, servingsNumber) {
     return decimalConversion[number]
   }
   else if (number >= 1 && quantity === undefined) {
-    console.log("pas de quantité"); 
     return number; 
   } else if ((number > 999 && quantity === "ml") || (number > 999 && quantity === "g"))
   {

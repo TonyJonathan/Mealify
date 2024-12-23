@@ -8,15 +8,27 @@
   gap: 20px; 
 }
 
-.mealContainer > :first-child {
+.mealContainer > :nth-child(1) {
   width: 301.8px; 
   height: auto;
   border-radius: 8px; 
+  transition: 0.3s ease; 
+}
+
+.mealContainer > :nth-child(1):hover {
+  filter: brightness(50%);
+  cursor: pointer; 
 }
 
 .mealContainer {
   flex: 0 1 295px  
+}
 
+.showRecipe {
+  position: absolute; 
+  background-color: black; 
+  width: 301.8px;
+   
 }
 
 .mealTitle {
