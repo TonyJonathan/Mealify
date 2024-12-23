@@ -35,8 +35,13 @@
   font-family: 'Rubik'; 
 }
 
+.selectionButtons:hover{
+  border: 3px solid rgb(23, 166, 61, 0.3);
+  cursor: pointer; 
+}
+
 .selectionButtons.active{
-  border: 3px solid #17a63d;
+  border: 3px solid rgb(23, 166, 61);
 }
 
 .separationLine {
