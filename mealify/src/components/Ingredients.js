@@ -36,6 +36,8 @@ import frozenSpinach from "../assets/ingredients/frozenSpinach.webp";
 import coconutMilk from "../assets/ingredients/coconutMilk.webp";
 import curryPowder from "../assets/ingredients/curryPowder.webp";
 import tomatoPaste from "../assets/ingredients/tomatoPaste.webp";
+import bacon from "../assets/ingredients/bacon.webp";
+import burgerBun from "../assets/ingredients/burgerBun.webp";
 
 
 
@@ -79,7 +81,9 @@ const ingredients = {
   "Épinards (surgelés)": frozenSpinach,
   "Lait de coco": coconutMilk,
   "Curry (poudre)": curryPowder,
-  "Tomate (concentré)": tomatoPaste
+  "Tomate (concentré)": tomatoPaste, 
+  "Lard": bacon, 
+  "Pain à burger": burgerBun
 
 }
 
