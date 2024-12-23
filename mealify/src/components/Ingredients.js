@@ -30,6 +30,12 @@ import avocado from "../assets/ingredients/avocado.webp";
 import riceVinegar from "../assets/ingredients/riceVinegar.webp";
 import saltySoySauce from "../assets/ingredients/saltySoySauce.webp";
 import creamCheese from "../assets/ingredients/creamCheese.webp";
+import veggieBalls from "../assets/ingredients/veggieBalls.webp";
+import rice from "../assets/ingredients/rice.webp";
+import frozenSpinach from "../assets/ingredients/frozenSpinach.webp";
+import coconutMilk from "../assets/ingredients/coconutMilk.webp";
+import curryPowder from "../assets/ingredients/curryPowder.webp";
+import tomatoPaste from "../assets/ingredients/tomatoPaste.webp";
 
 
 
@@ -68,6 +74,12 @@ const ingredients = {
   "Vinaigre de riz": riceVinegar,
   "Sauce soja salée": saltySoySauce,
   "Fromage frais": creamCheese, 
+  "Boulettes végétales": veggieBalls,
+  "Riz": rice,
+  "Épinards (surgelés)": frozenSpinach,
+  "Lait de coco": coconutMilk,
+  "Curry (poudre)": curryPowder,
+  "Tomate (concentré)": tomatoPaste
 
 }
 
