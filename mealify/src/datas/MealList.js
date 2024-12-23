@@ -4,6 +4,7 @@ import codChorizoCream from "../assets/meals/codChorizoCream.png"
 import croqueMonsieur from "../assets/meals/croqueMonsieur.png"
 import croziflette from "../assets/meals/croziflette.png"
 import salmonAvocadoMakis from "../assets/meals/salmonAvocadoMakis.png"
+import curryVeggieBalls from "../assets/meals/curryVeggieBalls.png"
 
 export const MealList = [
   {
@@ -182,7 +183,7 @@ export const MealList = [
   }, 
 
   {
-    id : 5, 
+    id : 6, 
     name: "Makis saumon avocat", 
     cover: salmonAvocadoMakis, 
     description: "Faites-vous une soirée makis !",
@@ -215,6 +216,38 @@ export const MealList = [
       ["Disposez : le fromage frais, les lamelles de saumon et les lamelles d'avocat. Badigeonnez un peu d'eau sur l'extrémité de la feuille de nori pour qu'elle se colle bien.", ["Fromage frais", "Saumon (surgelé)", "Avocat"]], 
       ["Enroulez le rouleau sur lui-même en appuyant fermement avec vos mains pour qu'il soit bien serré."], 
       ["Coupez les maki, à l'aide d'un couteau bien aiguisé (pour une meilleurs découpe : réservez au frais 15 à 20 minutes, de façon à ce qu'ils se raffermissent). Servez les makis avec la sauce soja. C'est prêt !", ["Sauce soja salée"]]
+    ]
+  },
+
+  {
+    id : 7, 
+    name: "Curry & boulettes veggie", 
+    cover: curryVeggieBalls, 
+    description: "Des boulettes de légumes au curry : un plat du soir végé idéal avec du riz !",
+    nutriscore: "B", 
+    preparationTime: "5 minutes",
+    cookingTime: "10 minutes", 
+    kcal: "653", 
+    proteins: "24g",
+    carbohydrates: "68g", 
+    lipids: "32g", 
+    ustensils: "Casserole, Plaques de cuisson, Passoire", 
+    seasoning: "", 
+    ingredients: [
+      ["Boulettes végétales", 80, "g"],
+      ["Riz", 70, "g"],
+      ["Épinards (surgelés)", 100, "g"],
+      ["Lait de coco", 80, "ml"],
+      ["Curry (poudre)", 1, "càs"],
+      ["Sauce soja salée", 1, "càs"],
+      ["Tomate (concentré)", 1, "càs"]
+    ], 
+    recipe: [
+      ["Dans une casserole d’eau bouillante salée, faites cuire le riz selon les instructions du paquet. Égouttez-le en fin de cuisson.", ["Riz"]],
+      ["Pendant ce temps, faites chauffer un filet d'huile d'olive dans une poêle. Ajoutez les épinards surgelés et faites-les revenir à couvert pendant 4 à 5 minutes, sur feu moyen.", ["Épinards (surgelés)"]], 
+      ["Ajoutez le curry et le concentré de tomate, puis mélangez. Ajoutez ensuite le lait de coco. Mélangez puis laissez mijoter 3 à 4 minutes.", ["Curry (poudre)", "Tomate (concentré)", "Lait de coco"]], 
+      ["Ajoutez les boulettes végétales et mélangez. Salez, poivrez, puis laissez mijoter à nouveau 3 à 4 minutes.", ["Boulettes végétales"]], 
+      ["Servez le curry veggie sur le riz. Ré-assaisonnez selon vos goûts, c'est prêt !"]
     ]
   }
 
