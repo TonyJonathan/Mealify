@@ -3,6 +3,7 @@ import croqueMonsieurLeek from "../assets/meals/croqueMonsieurLeek.png"
 import codChorizoCream from "../assets/meals/codChorizoCream.png"
 import croqueMonsieur from "../assets/meals/croqueMonsieur.png"
 import croziflette from "../assets/meals/croziflette.png"
+import salmonAvocadoMakis from "../assets/meals/salmonAvocadoMakis.png"
 
 export const MealList = [
   {
@@ -178,6 +179,44 @@ export const MealList = [
       ["Ajoutez le reblochon par-dessus, puis enfournez 15 minutes à 210°C.",  ["Roblochon"]], 
       ["Une fois le fromage bien fondu et doré, sortez le plat du four. C'est prêt !"]
     ]
+  }, 
+
+  {
+    id : 5, 
+    name: "Makis saumon avocat", 
+    cover: salmonAvocadoMakis, 
+    description: "Faites-vous une soirée makis !",
+    nutriscore: "C", 
+    preparationTime: "10 minutes",
+    cookingTime: "20 minutes", 
+    kcal: "540", 
+    proteins: "15g",
+    carbohydrates: "86g", 
+    lipids: "14g", 
+    ustensils: "Plaques de cuisson, Casserole, Économe", 
+    seasoning: "", 
+    ingredients: [
+      ["Riz (à sushi)", 100, "g"],
+      ["Saumon (surgelé)", 50, "g"],
+      ["Algues nori (feuille)", 2],
+      ["Avocat", 0.25],
+      ["Vinaigre de riz", 15, "ml"],
+      ["Sauce soja salée", 1, "càs"],
+      ["Fromage frais", 1, "càs"]
+    ], 
+    recipe: [
+      ["Rincez le riz à sushi plusieurs fois à l'eau claire, puis faites-le cuire selon les indications du paquet.", ["Riz (à sushi)"]],
+      ["Faites décongeler les filets de saumon (si vous utilisez du saumon frais, pensez à le surgeler avant de réaliser la recette). Depuis leur emballage en plastique ou dans un sachet zip, plongez les filets dans un récipient rempli d'eau à température ambiante. ", ["Saumon (surgelé)"]], 
+      ["Une fois décongelé, enlevez la peau du saumon. Coupez-le en fines lamelles.", ["Saumon (surgelé)"]], 
+      ["Coupez l'avocat en deux. Retirez la peau, puis coupez-le en fines lamelles.", ["Avocat"]], 
+      ["Une fois le riz cuit, ajoutez le vinaigre de riz et mélangez bien le tout délicatement. Transvasez le riz à sushi dans un plat pour qu'il refroidisse.", ["Vinaigre de riz", "Riz (à sushi)"]], 
+      ["Formez vos makis. Déroulez la natte en bambou (ou une feuille de papier sulfurisé) et déposez la feuille d'algue nori par-dessus.", ["Algues nori (feuille)"]], 
+      ["Préparez un petit bol d'eau à coté pour tremper vos doigts dedans, afin d'éviter que le riz ne colle et faciliter le montage de vos makis. Étalez une fine couche de riz sur l'ensemble de la feuille d'algue nori."], 
+      ["Disposez : le fromage frais, les lamelles de saumon et les lamelles d'avocat. Badigeonnez un peu d'eau sur l'extrémité de la feuille de nori pour qu'elle se colle bien.", ["Fromage frais", "Saumon (surgelé)", "Avocat"]], 
+      ["Enroulez le rouleau sur lui-même en appuyant fermement avec vos mains pour qu'il soit bien serré."], 
+      ["Coupez les maki, à l'aide d'un couteau bien aiguisé (pour une meilleurs découpe : réservez au frais 15 à 20 minutes, de façon à ce qu'ils se raffermissent). Servez les makis avec la sauce soja. C'est prêt !", ["Sauce soja salée"]]
+    ]
   }
+
 
 ]

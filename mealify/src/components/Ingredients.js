@@ -2,7 +2,6 @@ import basil from "../assets/ingredients/basil.webp"
 import beffSteak from "../assets/ingredients/beffSteak.webp"
 import breadcrumbs from "../assets/ingredients/breadcrumbs.webp"
 import egg from "../assets/ingredients/egg.webp"
-import parmesan from "../assets/ingredients/parmesan.webp"
 import shallot from "../assets/ingredients/shallot.webp"
 import spaghetti from "../assets/ingredients/spaghetti.webp"
 import tomatoSauce from "../assets/ingredients/tomatoSauce.webp"
@@ -20,11 +19,18 @@ import liquidCream from "../assets/ingredients/liquidCream.webp"
 import chives from "../assets/ingredients/chives.webp"
 import cookedHam from "../assets/ingredients/cookedHam.webp"
 import gratedParmesan from "../assets/ingredients/gratedParmesan.webp"
-
 import roblochon from "../assets/ingredients/roblochon.webp"
 import dicedBacon from "../assets/ingredients/dicedBacon.webp"
 import crozets from "../assets/ingredients/crozets.webp"
 import yellowOnion from "../assets/ingredients/yellowOnion.webp"
+import sushiRice from "../assets/ingredients/sushiRice.webp";
+import frozenSalmon from "../assets/ingredients/frozenSalmon.webp";
+import noriSheet from "../assets/ingredients/noriSheet.webp";
+import avocado from "../assets/ingredients/avocado.webp";
+import riceVinegar from "../assets/ingredients/riceVinegar.webp";
+import saltySoySauce from "../assets/ingredients/saltySoySauce.webp";
+import creamCheese from "../assets/ingredients/creamCheese.webp";
+
 
 
 
@@ -54,7 +60,14 @@ const ingredients = {
   "Roblochon": roblochon, 
   "Lardons": dicedBacon, 
   "Crozets": crozets, 
-  "Oignon jaune": yellowOnion
+  "Oignon jaune": yellowOnion,
+  "Riz (à sushi)": sushiRice,
+  "Saumon (surgelé)": frozenSalmon,
+  "Algues nori (feuille)": noriSheet,
+  "Avocat": avocado,
+  "Vinaigre de riz": riceVinegar,
+  "Sauce soja salée": saltySoySauce,
+  "Fromage frais": creamCheese, 
 
 }
 
