@@ -5,6 +5,7 @@ import croqueMonsieur from "../assets/meals/croqueMonsieur.png"
 import croziflette from "../assets/meals/croziflette.png"
 import salmonAvocadoMakis from "../assets/meals/salmonAvocadoMakis.png"
 import curryVeggieBalls from "../assets/meals/curryVeggieBalls.png"
+import avocadoAndBaconBurger from "../assets/meals/avocadoAndBaconBurger.png"
 
 export const MealList = [
   {
@@ -19,7 +20,7 @@ export const MealList = [
     proteins: "40g",
     carbohydrates: "89g", 
     lipids: "23g", 
-    ustensils: "Casserole, Poêle, Plaques de cuisson, Passoire.", 
+    ustensils: "Casserole, poêle, plaques de cuisson, passoire.", 
     seasoning: "Huile d'olive (1 càc)", 
     ingredients: [
       ["Pâtes (spaghetti)", 100, "g"],
@@ -54,7 +55,7 @@ export const MealList = [
     proteins: "31g",
     carbohydrates: "47g", 
     lipids: "37g", 
-    ustensils: "Four, Poêle, Plaques de cuisson.", 
+    ustensils: "Four, poêle, plaques de cuisson.", 
     seasoning: "", 
     ingredients: [
       ["Poireau", 1],
@@ -90,7 +91,7 @@ export const MealList = [
     proteins: "33g",
     carbohydrates: "50g",
     lipids: "42g",
-    ustensils: "Plaques de cuisson, Poêle, Casserole, Mixeur",
+    ustensils: "Plaques de cuisson, poêle, casserole, mixeur",
     seasoning: "",
     ingredients: [
       ["Cabillaud (frais)", 1],
@@ -161,7 +162,7 @@ export const MealList = [
     proteins: "28g",
     carbohydrates: "60g", 
     lipids: "37g", 
-    ustensils: "Plaques de cuisson, Four, Casserole, Passoire, Poêle, Plat à gratin", 
+    ustensils: "Plaques de cuisson, four, casserole, passoire, poêle, plat à gratin", 
     seasoning: "", 
     ingredients: [
       ["Roblochon", 50, "g"],
@@ -194,7 +195,7 @@ export const MealList = [
     proteins: "15g",
     carbohydrates: "86g", 
     lipids: "14g", 
-    ustensils: "Plaques de cuisson, Casserole, Économe", 
+    ustensils: "Plaques de cuisson, casserole, économe", 
     seasoning: "", 
     ingredients: [
       ["Riz (à sushi)", 100, "g"],
@@ -231,7 +232,7 @@ export const MealList = [
     proteins: "24g",
     carbohydrates: "68g", 
     lipids: "32g", 
-    ustensils: "Casserole, Plaques de cuisson, Passoire", 
+    ustensils: "Casserole, plaques de cuisson, passoire", 
     seasoning: "", 
     ingredients: [
       ["Boulettes végétales", 80, "g"],
@@ -248,6 +249,36 @@ export const MealList = [
       ["Ajoutez le curry et le concentré de tomate, puis mélangez. Ajoutez ensuite le lait de coco. Mélangez puis laissez mijoter 3 à 4 minutes.", ["Curry (poudre)", "Tomate (concentré)", "Lait de coco"]], 
       ["Ajoutez les boulettes végétales et mélangez. Salez, poivrez, puis laissez mijoter à nouveau 3 à 4 minutes.", ["Boulettes végétales"]], 
       ["Servez le curry veggie sur le riz. Ré-assaisonnez selon vos goûts, c'est prêt !"]
+    ]
+  }, 
+
+  {
+    id : 8, 
+    name: "Burger avocat & lard", 
+    cover: avocadoAndBaconBurger, 
+    description: "Rien de plus gourmand qu'un burger avocat et lard pour se réconforter cet hiver !",
+    nutriscore: "B", 
+    preparationTime: "3 minutes",
+    cookingTime: "10 minutes", 
+    kcal: "625", 
+    proteins: "22g",
+    carbohydrates: "53g", 
+    lipids: "37g", 
+    ustensils: "Poêle, plaques de cuisson", 
+    seasoning: "", 
+    ingredients: [
+      ["Pain à burger", 1],
+      ["Lard", 2, "tran."],
+      ["Avocat", 0.5],
+      ["Œuf", 1],
+      ["Ciboulette", 5, "g"], 
+      ["Beurre", 10, "g"]
+    ], 
+    recipe: [
+      ["Coupez les pains à burger en deux. Dans une poêle à feu vif, ajoutez une noisette de beurre et faites toaster, côté mie, les pains à burger pendant 3 minutes.", ["Pain à burger", "Beurre"]],
+      ["Retirez les pains puis ajoutez dans la même poêle les tranches de lard et faites-les griller 2 minutes de chaque côté sur feu vif. Elles doivent devenir presque croustillantes. Débarrassez ensuite sur une feuille de papier essuie-tout.", ["Lard"]], 
+      ["Gardez la même poêle, ajoutez une noisette de beurre et faites cuire les œufs au plat. Salez et poivrez.", ["Beurre", "Œuf"]], 
+      ["Dressez vos burgers. Déposez l'avocat, salez et poivrez. Ajoutez les tranches de lard, l'œuf au plat et de la ciboulette hachée si vous en avez.* Refermez le burger, c'est prêt !", ["Avocat", "Lard", "Œuf", "Ciboulette"]]
     ]
   }
 
