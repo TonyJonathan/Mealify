@@ -10,6 +10,7 @@ import avocadoAndBaconBurger from "../assets/meals/avocadoAndBaconBurger.png"
 export const MealList = [
   {
     id: 1, 
+    type: "meat", 
     name: "Boulettes alla bolognese", 
     cover: meatballs, 
     description: "Des boulettes bolognaise pour un remake de la Belle et le Clochard...",
@@ -44,7 +45,8 @@ export const MealList = [
   },
 
   {
-    id : 2, 
+    id: 2, 
+    type: "veggie", 
     name: "Croque-monsieur aux poireaux", 
     cover: croqueMonsieurLeek, 
     description: "Un croque-monsieur gourmand, les légumes en plus !",
@@ -81,6 +83,7 @@ export const MealList = [
 
   {
     id: 3,
+    type: "fish", 
     name: "Cabillaud à la crème de chorizo",
     cover: codChorizoCream,
     description: "Une recette au cabillaud qui fera frémir vos papilles !",
@@ -115,7 +118,8 @@ export const MealList = [
   }, 
 
   {
-    id : 4, 
+    id: 4, 
+    type: "meat", 
     name: "Croque-monsieur au four", 
     cover: croqueMonsieur, 
     description: "Un croque-monsieur comme on les aime !",
@@ -151,7 +155,8 @@ export const MealList = [
   },
 
   {
-    id : 5, 
+    id: 5, 
+    type: "meat", 
     name: "Croziflette", 
     cover: croziflette, 
     description: "Remplacez les pommes de terre d'une tartiflette par des crozets au sarrasin, et découvrez la savoureuse croziflette !",
@@ -184,7 +189,8 @@ export const MealList = [
   }, 
 
   {
-    id : 6, 
+    id: 6, 
+    type: "fish", 
     name: "Makis saumon avocat", 
     cover: salmonAvocadoMakis, 
     description: "Faites-vous une soirée makis !",
@@ -221,7 +227,8 @@ export const MealList = [
   },
 
   {
-    id : 7, 
+    id: 7, 
+    type: "veggie", 
     name: "Curry & boulettes veggie", 
     cover: curryVeggieBalls, 
     description: "Des boulettes de légumes au curry : un plat du soir végé idéal avec du riz !",
@@ -253,7 +260,8 @@ export const MealList = [
   }, 
 
   {
-    id : 8, 
+    id: 8, 
+    type: "meat", 
     name: "Burger avocat & lard", 
     cover: avocadoAndBaconBurger, 
     description: "Rien de plus gourmand qu'un burger avocat et lard pour se réconforter cet hiver !",
