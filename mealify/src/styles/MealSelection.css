@@ -67,6 +67,10 @@
   margin: 5px 0 30px 0px; 
 }
 
+.addMeal:hover {
+  cursor: pointer;  
+}
+
 @media (max-width: 1351px){
   .container {
     max-width: 1267.2px;; 
