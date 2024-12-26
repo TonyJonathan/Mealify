@@ -8,6 +8,8 @@ import "../styles/Modal.css"
 function MealSelection() {
   const [openMealId, setOpenMealId] = useState(null);
   const [servingsNumber, setServingsNumber] = useState(1);
+  const [addToMenu, setAddToMenu] = useState([]); 
+  
   return (
       <div className="container">
       {MealList.map((meal) => 
@@ -17,7 +19,7 @@ function MealSelection() {
           </img>
           <div>
             {openMealId === meal.id ? (
-              <Modal isOpen={openMealId} onClose={() => setOpenMealId(null)} meal={meal} servingsNumber={servingsNumber} setServingsNumber={setServingsNumber} />
+              <Modal isOpen={openMealId} onClose={() => setOpenMealId(null)} meal={meal} servingsNumber={servingsNumber} setServingsNumber={setServingsNumber} addToMenu={addToMenu} setAddToMenu={setAddToMenu}  />
             )
               : null
             }
