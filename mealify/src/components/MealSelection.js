@@ -10,6 +10,7 @@ function MealSelection() {
   const [servingsNumber, setServingsNumber] = useState(1);
   const [addToMenu, setAddToMenu] = useState([]); 
   
+  
   return (
       <div className="container">
       {MealList.map((meal) => 
@@ -30,8 +31,15 @@ function MealSelection() {
               <p className="nutritionalValues">Protéines {meal.proteins}</p>
               <p className="nutritionalValues">Glucides {meal.carbohydrates}</p>
               <p className="nutritionalValues">Graisses {meal.lipids}</p>
-            </div>
-            <button className="addMeal">Ajouter</button>
+          </div>
+          {addToMenu.find((dish) => dish.name === meal.name) ? 
+            <div className="addMealSelection">
+              <button>-</button>
+              <input type="text" disabled/>
+              <button>+</button>
+            </div> : 
+            <button className="addMeal">Ajouter</button>}
+            
           </div>
           
         )}
