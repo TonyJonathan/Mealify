@@ -4,6 +4,7 @@ import ingredients from "./Ingredients"
 import DishInfo from "./DishInfo";
 import IngredientsSection from "./IngredientsSection";
 import RecipeSection from "./RecipeSection";
+import AddDish from "./AddDish"
 
 function Modal({ isOpen, onClose, meal, servingsNumber, setServingsNumber, addToMenu, setAddToMenu }) {
 
@@ -28,7 +29,11 @@ function Modal({ isOpen, onClose, meal, servingsNumber, setServingsNumber, addTo
           meal={meal}
           ingredients={ingredients}
         />
-        <button className="addButton" onClick={() => { onClose();  setAddToMenu([...addToMenu, { name: meal.name, quantity: servingsNumber }]); console.log(addToMenu); setServingsNumber(1); }}>
+        <button className="addButton" onClick={() => {
+          AddDish({ meal, addToMenu, setAddToMenu, servingsNumber })
+          onClose()
+          setServingsNumber(1)
+        }}>
           Ajouter {servingsNumber > 1 ? (`x ${servingsNumber}`) : null}
         </button>
       </div>
