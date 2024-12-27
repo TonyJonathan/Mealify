@@ -31,7 +31,7 @@ function MealSelection() {
               <p className="nutritionalValues">Glucides {meal.carbohydrates}</p>
               <p className="nutritionalValues">Graisses {meal.lipids}</p>
             </div>
-            <p className="addMeal">Ajouter</p>
+            <button className="addMeal">Ajouter</button>
           </div>
           
         )}

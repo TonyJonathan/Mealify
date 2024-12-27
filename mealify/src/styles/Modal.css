@@ -184,8 +184,12 @@ margin-bottom: 10px;
   margin: 30px auto;
   border-radius: 25px;  
   display: block; 
+  border: none; 
 }
 
 .addButton:hover {
   cursor: pointer; 
+  background-color: #f44831; 
+  color: white; 
+  transition: background-color 0.75s ease;
 }
