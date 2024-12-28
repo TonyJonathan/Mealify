@@ -37,14 +37,22 @@ function MealSelection() {
               <p className="nutritionalValues">Glucides {meal.carbohydrates}</p>
               <p className="nutritionalValues">Graisses {meal.lipids}</p>
           </div>
-          {addToMenu.find((dish) => dish.name === meal.name) ? 
+          {addToMenu.find((dish) => dish.name === meal.name && dish.quantity > 0) ? 
             <div className="addMealSelection">
-              <button>-</button>
+              <button
+                onClick={() => AddDish({ meal, addToMenu, setAddToMenu, servingsNumber: -1 })}
+              >
+                -
+              </button>
               <input
                 type="text"
                 value={mealNumber(meal)}
                 disabled />
-              <button>+</button>
+              <button
+                onClick={() => AddDish({ meal, addToMenu, setAddToMenu, servingsNumber: 1 })}
+              >
+                +
+              </button>
             </div> : 
             <button
               className="addMeal"
