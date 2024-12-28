@@ -71,10 +71,11 @@
 
 .addMeal:hover{
   background-color: rgb(23, 166, 61);  
+  cursor: pointer;  
 }
 
 .addMeal:hover {
-  cursor: pointer;  
+  
 }
 
 .addMealSelection {
@@ -92,14 +93,22 @@
   font-size: 16px; 
   border: none;
   border-radius: 5px; 
+  font-size: 16px; 
   transition: background-color 0.25s ease;
+}
+
+.addMealSelection > button:hover{
+  background-color: rgb(23, 166, 61);  
+  cursor: pointer;  
 }
 
 .addMealSelection > input {
   width: 60px; 
   border-radius: 5px; 
   margin: 0px 3px; 
-  align-text: center; 
+  text-align: center; 
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px; 
 }
 
 

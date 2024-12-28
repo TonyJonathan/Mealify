@@ -3,12 +3,17 @@ import "../styles/MealSelection.css"
 import React, { useState } from "react";
 import Modal from "./Modal";
 import "../styles/Modal.css"
+import AddDish from "./AddDish"
 
 
 function MealSelection() {
   const [openMealId, setOpenMealId] = useState(null);
   const [servingsNumber, setServingsNumber] = useState(1);
   const [addToMenu, setAddToMenu] = useState([]); 
+  const mealNumber = (meal) => {
+    const dish = addToMenu.find((dish) => dish.name === meal.name)
+    return dish ? dish.quantity : 0
+  }
   
   
   return (
@@ -35,10 +40,16 @@ function MealSelection() {
           {addToMenu.find((dish) => dish.name === meal.name) ? 
             <div className="addMealSelection">
               <button>-</button>
-              <input type="text" disabled/>
+              <input
+                type="text"
+                value={mealNumber(meal)}
+                disabled />
               <button>+</button>
             </div> : 
-            <button className="addMeal">Ajouter</button>}
+            <button
+              className="addMeal"
+              onClick={() => AddDish({ meal, addToMenu, setAddToMenu, servingsNumber: 1 })}            
+            >Ajouter</button>}
             
           </div>
           
