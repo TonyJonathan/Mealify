@@ -40,9 +40,9 @@ body {
 
 
 .div-search-input {
-  width: 50%; 
+  width: 40%; 
   justify-content: center; 
-  margin-left: auto; 
+  margin-left: 16%; 
   margin-right: auto; 
   display: flex; 
   margin-top: 15px; 
@@ -53,6 +53,7 @@ body {
 }
 
 .search-input {
+  width: calc(100% - 50px); 
   margin-right: auto; 
   border: none; 
   background-color: #e3e3e3; 
