@@ -11,16 +11,19 @@ const mealType = {
   "POISSON 🐠": "fish"
 }
 
-function MealSelection({ activeSelection }) {
+function MealSelection({ activeSelection, searchValue }) {
   const [openMealId, setOpenMealId] = useState(null);
   const [servingsNumber, setServingsNumber] = useState(1);
-  const [addToMenu, setAddToMenu] = useState([]); 
-  console.log(activeSelection); 
+  const [addToMenu, setAddToMenu] = useState([])
+  const filteredMeals = MealList.filter((meal) => {
+    const matchesType = activeSelection === "TOUS 🍽️" || meal.type === mealType[activeSelection];
+    const matchesSearch = meal.name.toLowerCase().includes(searchValue.toLowerCase());
+    return matchesType && matchesSearch;
+  });
   
   return (
       <div className="container">
-        {MealList.map((meal) => 
-          meal.type === mealType[activeSelection] || activeSelection === "TOUS 🍽️" ? (
+        {filteredMeals.map((meal) =>     
             <div className="mealContainer" key={meal.name}>
               <img src={meal.cover} alt={meal.name} width="252.5px"
                 onClick={() => setOpenMealId(meal.id)}>
@@ -40,8 +43,7 @@ function MealSelection({ activeSelection }) {
                   <p className="nutritionalValues">Graisses {meal.lipids}</p>
               </div>
                 <AddButton meal={meal} addToMenu={addToMenu} setAddToMenu={setAddToMenu} />
-            </div>
-          ) : null
+              </div>
         )}
       </div>
     )

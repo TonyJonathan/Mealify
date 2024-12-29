@@ -6,11 +6,12 @@ import { useState } from "react"
 
 function App() {
   const [activeSelection, setActiveSelection] = useState("TOUS 🍽️");
+  const [searchValue, setSearchValue] = useState('')
   return (
     <>
-      <Banner />
+      <Banner searchValue={searchValue} setSearchValue={setSearchValue} />
       <Selection activeSelection={activeSelection} setActiveSelection={setActiveSelection} />
-      <MealSelection activeSelection={activeSelection} />
+      <MealSelection activeSelection={activeSelection} searchValue={searchValue} />
     </>
   )
 }

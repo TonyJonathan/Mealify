@@ -1,10 +1,11 @@
 
 .container {
   max-width: 1267.2px;; 
-  margin: 0 auto;
+  margin: 0 auto 50px auto;
   display: flex;
   flex-wrap: wrap;
   gap: 20px; 
+  
 }
 
 .mealContainer > :nth-child(1) {
