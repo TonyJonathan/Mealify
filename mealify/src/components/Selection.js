@@ -1,8 +1,8 @@
 import "../styles/Selection.css"
 import React, { useState } from "react"
 
-function Selection() {
-  const [activeSelection, setActiveSelection] = useState("TOUS 🍽️");
+function Selection({ activeSelection, setActiveSelection }) {
+  
   const buttons = ["TOUS 🍽️", "VIANDES 🥩", "POISSON 🐠", "VÉGÉ 🥗"]; 
   const selectOptions = []; 
   for (let i = 0; i < buttons.length; i++){

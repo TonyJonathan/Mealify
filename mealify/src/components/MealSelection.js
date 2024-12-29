@@ -3,19 +3,26 @@ import "../styles/MealSelection.css"
 import React, { useState } from "react";
 import Modal from "./Modal";
 import "../styles/Modal.css"
-import AddDish from "./AddDish"
 import AddButton from "./AddButton"
 
 
-function MealSelection() {
+const mealType = {
+  "VÉGÉ 🥗": "veggie", 
+  "VIANDES 🥩": "meat", 
+  "POISSON 🐠": "fish"
+}
+
+
+function MealSelection({ activeSelection }) {
   const [openMealId, setOpenMealId] = useState(null);
   const [servingsNumber, setServingsNumber] = useState(1);
   const [addToMenu, setAddToMenu] = useState([]); 
-  
+  console.log(activeSelection); 
   
   return (
       <div className="container">
       {MealList.map((meal) => 
+        meal.type === mealType[activeSelection] || activeSelection === "TOUS 🍽️" ? (
         <div className="mealContainer" key={meal.name}>
           <img src={meal.cover} alt={meal.name} width="252.5px"
             onClick={() => setOpenMealId(meal.id)}>
@@ -37,6 +44,7 @@ function MealSelection() {
             <AddButton meal={meal} addToMenu={addToMenu} setAddToMenu={setAddToMenu} />
             
           </div>
+        ) : null
           
         )}
 
