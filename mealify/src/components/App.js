@@ -7,6 +7,7 @@ import { useState } from "react"
 function App() {
   const [activeSelection, setActiveSelection] = useState("TOUS 🍽️");
   const [searchValue, setSearchValue] = useState('')
+  
   return (
     <>
       <Banner searchValue={searchValue} setSearchValue={setSearchValue} />
