@@ -5,7 +5,7 @@ import cuterly from "../assets/icons/cuterly.svg"
 import { useState } from 'react'
 import Cart from "./Cart.js"
 
-function Banner({ searchValue, setSearchValue }) {
+function Banner({ searchValue, setSearchValue, addToMenu, setAddToMenu }) {
   const [openCart, setOpenCart] = useState(null); 
   
   return (
@@ -27,7 +27,7 @@ function Banner({ searchValue, setSearchValue }) {
         <img src={cuterly} alt="cuterly" className="cuterly" onClick={() => setOpenCart(true)} />
       </div>
       <div className="line"></div>
-      <Cart isOpen={openCart} onClose={() => setOpenCart(null)} />
+      <Cart isOpen={openCart} onClose={() => setOpenCart(null)} addToMenu={addToMenu} setAddToMenu={setAddToMenu} />
     </>
   )
 }

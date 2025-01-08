@@ -1,15 +1,18 @@
 import "../styles/Modal.css"
+import "../styles/Cart.css"
 
-function Cart({ isOpen, onClose }) {
+function Cart({ isOpen, onClose, addToMenu, setAddToMenu }) {
   if (!isOpen) return null 
-
+  console.log(addToMenu)
   return (
     <>
-      <div className="modal-overlay" onClick={onClose}>
-        <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <div className="cart-overlay" onClick={onClose}>
+        <div className="cart-content" onClick={(e) => e.stopPropagation()}>
           <button className="modal-close" onClick={onClose}>
             ×
           </button>
+    
+          
         </div>
       </div>
     </>

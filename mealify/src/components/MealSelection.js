@@ -11,10 +11,10 @@ const mealType = {
   "POISSON 🐠": "fish"
 }
 
-function MealSelection({ activeSelection, searchValue }) {
+function MealSelection({ activeSelection, searchValue, addToMenu, setAddToMenu }) {
   const [openMealId, setOpenMealId] = useState(null);
   const [servingsNumber, setServingsNumber] = useState(1);
-  const [addToMenu, setAddToMenu] = useState([])
+  
   const filteredMeals = MealList.filter((meal) => {
     const matchesType = activeSelection === "TOUS 🍽️" || meal.type === mealType[activeSelection];
     const matchesSearch = meal.name.toLowerCase().includes(searchValue.toLowerCase());
