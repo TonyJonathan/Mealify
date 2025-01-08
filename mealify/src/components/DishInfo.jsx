@@ -1,6 +1,7 @@
 import preparation from "../assets/icons/preparation.svg"
 import cooking from "../assets/icons/cooking.svg"
 import calories from "../assets/icons/calories.svg"
+import React from 'react'
 
 function DishInfo({meal}) {
   return (

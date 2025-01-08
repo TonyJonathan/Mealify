@@ -1,5 +1,6 @@
 import "../styles/Modal.css"
 import "../styles/Cart.css"
+import React from 'react'
 
 function Cart({ isOpen, onClose, addToMenu, setAddToMenu }) {
   if (!isOpen) return null 
@@ -11,7 +12,6 @@ function Cart({ isOpen, onClose, addToMenu, setAddToMenu }) {
           <button className="modal-close" onClick={onClose}>
             ×
           </button>
-    
           
         </div>
       </div>

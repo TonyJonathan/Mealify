@@ -3,6 +3,7 @@ import Banner from "./Banner"
 import Selection from "./Selection"
 import MealSelection from './MealSelection'
 import { useState } from "react"
+import React from "react"
 
 function App() {
   const [activeSelection, setActiveSelection] = useState("TOUS 🍽️");

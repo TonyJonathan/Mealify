@@ -1,4 +1,5 @@
 import AddDish from "./AddDish"
+import React from "react"
 
 function AddButton({ meal, addToMenu, setAddToMenu }) {
   const mealNumber = (meal) => {

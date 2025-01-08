@@ -2,8 +2,8 @@ import "../styles/Banner.css"
 import logo from "../assets/logo.svg"
 import searchLogo from "../assets/searchLogo.png"
 import cuterly from "../assets/icons/cuterly.svg"
-import { useState } from 'react'
-import Cart from "./Cart.js"
+import React, { useState } from 'react'
+import Cart from "./Cart.jsx"
 
 function Banner({ searchValue, setSearchValue, addToMenu, setAddToMenu }) {
   const [openCart, setOpenCart] = useState(null); 

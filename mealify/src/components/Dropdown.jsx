@@ -1,4 +1,5 @@
 import "../styles/Dropdown.css"
+import React from 'react'
 
 function Dropdown({servingsNumber, setServingsNumber}) {
   const optionsNumber = 11; 

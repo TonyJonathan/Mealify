@@ -1,5 +1,6 @@
 import Conversion from "./Conversion"
 import Dropdown from "./Dropdown"
+import React from 'react'
 
 
 function IngredientsSection({ servingsNumber, setServingsNumber, meal, ingredients }) {
