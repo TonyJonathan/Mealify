@@ -1,0 +1,44 @@
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  z-index: 1000;
+}
+
+.cart-content {
+  background: white;
+  width: 480px; /* Largeur fixe ou ajustable */
+  height: 100vh; /* 80% de la hauteur de l'écran */
+  position: relative; /* Nécessaire pour positionner l'élément sticky par rapport au modal */
+  overflow-y: auto; /* Barre de défilement pour le contenu */
+  padding: 0; /* Pas d'espace entre le haut du modal et le contenu */
+  box-sizing: border-box; /* S'assurer que le padding ne modifie pas la taille totale */
+}
+
+.empty-cart{
+  width: 100%; 
+  height: 100%; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-item: center; 
+}
+
+.empty-cart > p {
+  text-align: center;
+  fony-size: 20px; 
+}
+
+.empty-cart > button {
+  margin: 0px 50px;  
+  padding: 20px 0px; 
+  background-color: black; 
+  font-size: 20px; 
+  color: white; 
+}
