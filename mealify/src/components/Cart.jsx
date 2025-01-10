@@ -38,12 +38,14 @@ function Cart({ isOpen, onClose, addToMenu, setAddToMenu }) {
               <p className="good-choices">Bon choix ! Voici vos plats :</p>
               {addToMenu.map((dish) => {
                 const meal = MealList.find((mealItem) => mealItem.name === dish.name); 
+                const zeroQuantity = - dish.quantity; 
                   return meal ? (
                     <div className="dish-div" key={meal.id}>
                       <img src={meal.thumbnail} alt="meal.name" />
                       <p>{meal.name}<span>i</span>x{dish.quantity} </p>
                       <button
                         className="delete-button"
+                        onClick={() => AddDish({meal: dish, addToMenu, setAddToMenu, servingsNumber: zeroQuantity} )}
                       >
                       ×
                       </button>
