@@ -7,6 +7,7 @@ import Cart from "./Cart.jsx"
 
 function Banner({ searchValue, setSearchValue, addToMenu, setAddToMenu }) {
   const [openCart, setOpenCart] = useState(null); 
+  const mealNumber = addToMenu.reduce((total, meal) => total + meal.quantity, 0)
   
   return (
     <>
@@ -24,7 +25,9 @@ function Banner({ searchValue, setSearchValue, addToMenu, setAddToMenu }) {
           >
           </input>
         </div>
+        <p className="meal-count">{mealNumber}</p>
         <img src={cuterly} alt="cuterly" className="cuterly" onClick={() => setOpenCart(true)} />
+        
       </div>
       <div className="line"></div>
       <Cart isOpen={openCart} onClose={() => setOpenCart(null)} addToMenu={addToMenu} setAddToMenu={setAddToMenu} />
