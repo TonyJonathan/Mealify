@@ -25,7 +25,8 @@ function Banner({ searchValue, setSearchValue, addToMenu, setAddToMenu }) {
           >
           </input>
         </div>
-        <p className="meal-count">{mealNumber}</p>
+        {mealNumber > 0 ? <p className="meal-count">{mealNumber}</p> : null }
+        
         <img src={cuterly} alt="cuterly" className="cuterly" onClick={() => setOpenCart(true)} />
         
       </div>

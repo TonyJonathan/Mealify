@@ -88,6 +88,19 @@ body {
  width: 20px;
 }
 
+.meal-count {
+  position: absolute; 
+  color: white; 
+  background-color: rgb(23, 166, 61); 
+  padding: 6px 6px; 
+  border-radius: 50%; 
+  margin-left: calc(100% - 20px);
+  font-size: 10px; 
+  z-index: 10; 
+  width: 11px; 
+  text-align: center; 
+}
+
 @media (max-width: 1352px) {
   .div-logo {
     max-width: 1267.2px; 
