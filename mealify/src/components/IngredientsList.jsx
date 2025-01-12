@@ -6,7 +6,6 @@ import Conversion from "./Conversion"
 import ingredients from "./Ingredients"
 
 function IngredientList({ isOpen, onClose, addToMenu }) {
-  console.log(addToMenu)
   const list = [];
   addToMenu.forEach((dish) => {
     const meal = MealList.find((mealItem) => mealItem.name === dish.name);
