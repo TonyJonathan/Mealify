@@ -46,13 +46,3 @@ function IngredientList({ isOpen, onClose, addToMenu }) {
 }
 
 export default IngredientList
-
-  //   return meal ? (meal.ingredients.map((ingredient) => {
-  //     return (
-  //       <div className="ingredient" key={ingredient[0]}>
-  //         <img src={ingredients[ingredient[0]]} alt={ingredient[0]}></img>
-  //        
-  //       </div>
-  //     )
-  //   })) : null
-  // })}
