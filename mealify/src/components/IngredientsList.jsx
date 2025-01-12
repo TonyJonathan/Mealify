@@ -6,7 +6,21 @@ import Conversion from "./Conversion"
 import ingredients from "./Ingredients"
 
 function IngredientList({ isOpen, onClose, addToMenu }) {
-  console.log(addToMenu); 
+  console.log(addToMenu)
+  const list = [];
+  addToMenu.forEach((dish) => {
+    const meal = MealList.find((mealItem) => mealItem.name === dish.name);
+    if (meal) {
+      meal.ingredients.forEach((ingredient) => {
+        const [name, quantity, unit] = ingredient; 
+        const existingIngredient = list.find((item) => item[0] === name); 
+        existingIngredient ? (existingIngredient[1] += (Number(quantity) * dish.quantity)) :
+          list.push([name, Number(quantity) * dish.quantity, unit])
+      });
+    }
+  });
+
+
   if (!isOpen) return null; 
  
   return (
@@ -17,16 +31,13 @@ function IngredientList({ isOpen, onClose, addToMenu }) {
           ×
         </button>
           <p className="title-list">Liste des ingrédients</p>
-          {addToMenu.map((dish) => {
-            const meal = MealList.find((mealItem) => mealItem.name === dish.name)
-            return meal ? (meal.ingredients.map((ingredient) => {
-              return (
-                <div className="ingredient" key={ingredient[0]}>
-                  <img src={ingredients[ingredient[0]]} alt={ingredient[0]}></img>
-                  <p>{ingredient[0]}: {Conversion(ingredient[1], ingredient[2], dish.quantity)}</p>
-                </div>
-              )
-            })) : null
+          {list.map((ingredient) => {
+            return (
+              <div className="ingredient" key={ingredient[0]}>
+                <img src={ingredients[ingredient[0]]} alt={ingredient[0]}></img>
+                <p>{ingredient[0]}: {Conversion(ingredient[1], ingredient[2], 1)}</p>
+              </div>
+            )
           })}
         </div>
       </div>
@@ -35,3 +46,13 @@ function IngredientList({ isOpen, onClose, addToMenu }) {
 }
 
 export default IngredientList
+
+  //   return meal ? (meal.ingredients.map((ingredient) => {
+  //     return (
+  //       <div className="ingredient" key={ingredient[0]}>
+  //         <img src={ingredients[ingredient[0]]} alt={ingredient[0]}></img>
+  //        
+  //       </div>
+  //     )
+  //   })) : null
+  // })}

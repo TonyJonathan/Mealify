@@ -75,7 +75,7 @@ export const MealList = [
       ["Fromage râpé", 60, "g"],
       ["Crème fraîche", 30, "g"],
       ["Parmesan (morceaux)", 1, "càs"],
-      ["Salade (mélange)", 1, "poignée"],
+      ["Salade (mélange)", 50, "g"],
       ["Beurre", 5, "g"]
     ], 
     recipe: [
@@ -150,7 +150,7 @@ export const MealList = [
       ["Fromage râpé", 60, "g"],
       ["Crème fraîche", 30, "g"],
       ["Parmesan (râpé)", 0.5, "càs"],
-      ["Salade (mélange)", 2, "poignée"],
+      ["Salade (mélange)", 100, "g"],
       ["Beurre demi-sel", 5, "g"]
     ], 
     recipe: [

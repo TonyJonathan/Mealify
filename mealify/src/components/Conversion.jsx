@@ -13,10 +13,11 @@ const unityConversion = {
 
 function Conversion(number, quantity, servingsNumber) {
   number = number * servingsNumber; 
-  
+
   if (number < 1)
   {
-    return decimalConversion[number]
+    return quantity ? (`${decimalConversion[number]} ${quantity}`)
+      : decimalConversion[number]
   }
   else if (number >= 1 && quantity === undefined) {
     return number; 
