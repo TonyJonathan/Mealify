@@ -25,10 +25,12 @@ function Banner({ searchValue, setSearchValue, addToMenu, setAddToMenu }) {
           >
           </input>
         </div>
-        {mealNumber > 0 ? <p className="meal-count">{mealNumber}</p> : null }
         
-        <img src={cuterly} alt="cuterly" className="cuterly" onClick={() => setOpenCart(true)} />
-        
+        <div>
+          {mealNumber > 0 ? <p className="meal-count">{mealNumber}</p> : null } 
+          <img src={cuterly} alt="cuterly" className="cuterly" onClick={() => setOpenCart(true)} />
+          
+        </div>
       </div>
       <div className="line"></div>
       <Cart isOpen={openCart} onClose={() => setOpenCart(null)} addToMenu={addToMenu} setAddToMenu={setAddToMenu} />
