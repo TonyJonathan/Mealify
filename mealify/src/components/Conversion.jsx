@@ -13,7 +13,7 @@ const unityConversion = {
 
 function Conversion(number, quantity, servingsNumber) {
   number = number * servingsNumber; 
-
+  
   if (number < 1)
   {
     return decimalConversion[number]

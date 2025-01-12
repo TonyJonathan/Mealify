@@ -4,10 +4,12 @@ import searchLogo from "../assets/searchLogo.png"
 import cuterly from "../assets/icons/cuterly.svg"
 import React, { useState } from 'react'
 import Cart from "./Cart.jsx"
+import IngredientList from "./IngredientsList.jsx"
 
 function Banner({ searchValue, setSearchValue, addToMenu, setAddToMenu }) {
   const [openCart, setOpenCart] = useState(null); 
-  const mealNumber = addToMenu.reduce((total, meal) => total + meal.quantity, 0)
+  const [openList, setOpenList] = useState(null)
+  const mealNumber = addToMenu.reduce((total, meal) => total + Number(meal.quantity), 0)
   
   return (
     <>
@@ -29,11 +31,11 @@ function Banner({ searchValue, setSearchValue, addToMenu, setAddToMenu }) {
         <div>
           {mealNumber > 0 ? <p className="meal-count">{mealNumber}</p> : null } 
           <img src={cuterly} alt="cuterly" className="cuterly" onClick={() => setOpenCart(true)} />
-          
         </div>
       </div>
       <div className="line"></div>
-      <Cart isOpen={openCart} onClose={() => setOpenCart(null)} addToMenu={addToMenu} setAddToMenu={setAddToMenu} />
+      <Cart isOpen={openCart} onClose={() => setOpenCart(null)} addToMenu={addToMenu} setAddToMenu={setAddToMenu} setOpenList={setOpenList} />
+      {openList ? <IngredientList isOpen={openList} onClose={() => setOpenList(null)} addToMenu={addToMenu} /> : null}
     </>
   )
 }

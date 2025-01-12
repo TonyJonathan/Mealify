@@ -4,7 +4,7 @@ import { MealList } from "../datas/MealList"
 import AddDish from "./AddDish"
 import React, { useEffect, useState } from 'react'
 
-function Cart({ isOpen, onClose, addToMenu, setAddToMenu }) {
+function Cart({ isOpen, onClose, addToMenu, setAddToMenu, setOpenList }) {
   const [showOverlay, setShowOverlay] = useState(false);
   
   useEffect(() => {
@@ -55,7 +55,7 @@ function Cart({ isOpen, onClose, addToMenu, setAddToMenu }) {
                   })
                 }
                 <div className="show-ingredients">
-                    <button className="addButton">Ingrédients</button>
+                <button className="addButton" onClick={() => { onClose(); setOpenList(true); }}>Ingrédients</button>
                 </div>
               </div>
           }

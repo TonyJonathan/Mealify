@@ -13,9 +13,6 @@ function App() {
 
   useEffect(() => {localStorage.setItem('menu', JSON.stringify(addToMenu))}, [addToMenu])
   
-
-
-
   return (
     <>
       <Banner searchValue={searchValue} setSearchValue={setSearchValue} addToMenu={addToMenu} setAddToMenu={setAddToMenu} />
