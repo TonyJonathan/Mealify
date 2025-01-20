@@ -1,9 +1,9 @@
 import "../styles/Modal.css"
 import React from 'react'
 import "../styles/IngredientsList.css"
-import { MealList } from "../datas/MealList"
+import { MealList } from "../data/MealList"
 import Conversion from "./Conversion"
-import ingredients from "./Ingredients"
+import { getImagePath } from "./Ingredients"
 
 function IngredientList({ isOpen, onClose, addToMenu }) {
   const list = [];
@@ -33,7 +33,7 @@ function IngredientList({ isOpen, onClose, addToMenu }) {
           {list.map((ingredient) => {
             return (
               <div className="ingredient" key={ingredient[0]}>
-                <img src={ingredients[ingredient[0]]} alt={ingredient[0]}></img>
+                <img src={getImagePath(ingredient[0])} alt={ingredient[0]} />
                 <p>{ingredient[0]}: {Conversion(ingredient[1], ingredient[2], 1)}</p>
               </div>
             )
