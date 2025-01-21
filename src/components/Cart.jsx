@@ -1,6 +1,6 @@
 import "../styles/Modal.css"
 import "../styles/Cart.css"
-import { MealList } from "../datas/MealList"
+import { MealList } from "../data/MealList"
 import AddDish from "./AddDish"
 import React, { useEffect, useState } from 'react'
 

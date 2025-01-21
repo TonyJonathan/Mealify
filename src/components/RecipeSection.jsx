@@ -1,6 +1,7 @@
 import React from 'react'
+import { getImagePath } from './Ingredients'
 
-function RecipeSection({ meal, ingredients }) {
+function RecipeSection({ meal }) {
   return (
     <>
       <div className="recipe-section">
@@ -10,7 +11,7 @@ function RecipeSection({ meal, ingredients }) {
               <div className="ingredients-list">
               {Array.isArray(step[1]) ? (
                 step[1].map((ingredient) => (
-                <img src={ingredients[ingredient]} alt={ingredient} key={ingredient} className="ingredients-picture" />
+                <img src={getImagePath(ingredient)} alt={ingredient} key={ingredient} className="ingredients-picture" />
                 ))
 )               : null}
               </div>

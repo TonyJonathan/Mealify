@@ -1,4 +1,4 @@
-import { MealList } from "../datas/MealList";
+import { MealList } from "../data/MealList";
 import "../styles/MealSelection.css"
 import React, { useState } from "react";
 import Modal from "./Modal";

@@ -26,7 +26,6 @@ function Modal({ isOpen, onClose, meal, servingsNumber, setServingsNumber, addTo
         />
         <RecipeSection
           meal={meal}
-          ingredients={ingredients}
         />
         <button className="addButton" onClick={() => {
           AddDish({ meal, addToMenu, setAddToMenu, servingsNumber })
