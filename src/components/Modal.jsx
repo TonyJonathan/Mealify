@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Modal.css" // Styles pour le modal
-import ingredients from "./Ingredients"
+import { ingredients, getImagePath } from "./Ingredients"
 import DishInfo from "./DishInfo";
 import IngredientsSection from "./IngredientsSection";
 import RecipeSection from "./RecipeSection";
@@ -23,7 +23,6 @@ function Modal({ isOpen, onClose, meal, servingsNumber, setServingsNumber, addTo
           servingsNumber={servingsNumber}
           setServingsNumber={setServingsNumber}
           meal={meal}
-          ingredients={ingredients}
         />
         <RecipeSection
           meal={meal}
