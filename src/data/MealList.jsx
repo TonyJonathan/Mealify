@@ -1,27 +1,11 @@
-import meatballs from "../assets/meals/meatballs.png"
-import croqueMonsieurLeek from "../assets/meals/croqueMonsieurLeek.png"
-import codChorizoCream from "../assets/meals/codChorizoCream.png"
-import croqueMonsieur from "../assets/meals/croqueMonsieur.png"
-import croziflette from "../assets/meals/croziflette.png"
-import salmonAvocadoMakis from "../assets/meals/salmonAvocadoMakis.png"
-import curryVeggieBalls from "../assets/meals/curryVeggieBalls.png"
-import avocadoAndBaconBurger from "../assets/meals/avocadoAndBaconBurger.png"
-import meatballsThumbnail from "../assets/meals/meatballsThumbnail.webp"
-import croqueMonsieurLeekThumbnail from "../assets/meals/croqueMonsieurLeekThumbnail.webp"
-import codChorizoCreamThumbnail from "../assets/meals/codChorizoCreamThumbnail.webp"
-import croqueMonsieurThumbnail from "../assets/meals/croqueMonsieurThumbnail.webp"
-import crozifletteThumbnail from "../assets/meals/crozifletteThumbnail.webp"
-import salmonAvocadoMakisThumbnail from "../assets/meals/salmonAvocadoMakisThumbnail.webp"
-import curryVeggieBallsThumbnail from "../assets/meals/curryVeggieBallsThumbnail.webp"
-import avocadoAndBaconBurgerThumbnail from "../assets/meals/avocadoAndBaconBurgerThumbnail.webp"
 
 export const MealList = [
   {
     id: 1, 
     type: "meat", 
     name: "Boulettes alla bolognese", 
-    cover: meatballs, 
-    thumbnail: meatballsThumbnail, 
+    cover: "meatballs", 
+    thumbnail: "meatballsThumbnail", 
     description: "Des boulettes bolognaise pour un remake de la Belle et le Clochard...",
     nutriscore: "A", 
     preparationTime: "10 minutes",
@@ -57,8 +41,8 @@ export const MealList = [
     id: 2, 
     type: "veggie", 
     name: "Croque-monsieur aux poireaux", 
-    cover: croqueMonsieurLeek, 
-    thumbnail: croqueMonsieurLeekThumbnail,
+    cover: "croqueMonsieurLeek", 
+    thumbnail: "croqueMonsieurLeekThumbnail",
     description: "Un croque-monsieur gourmand, les légumes en plus !",
     nutriscore: "A", 
     preparationTime: "10 minutes",
@@ -95,8 +79,8 @@ export const MealList = [
     id: 3,
     type: "fish", 
     name: "Cabillaud à la crème de chorizo",
-    cover: codChorizoCream,
-    thumbnail: codChorizoCreamThumbnail,
+    cover: "codChorizoCream",
+    thumbnail: "codChorizoCreamThumbnail",
     description: "Une recette au cabillaud qui fera frémir vos papilles !",
     nutriscore: "B",
     preparationTime: "5 minutes",
@@ -132,8 +116,8 @@ export const MealList = [
     id: 4, 
     type: "meat", 
     name: "Croque-monsieur au four", 
-    cover: croqueMonsieur, 
-    thumbnail: croqueMonsieurThumbnail,
+    cover: "croqueMonsieur", 
+    thumbnail: "croqueMonsieurThumbnail",
     description: "Un croque-monsieur comme on les aime !",
     nutriscore: "B", 
     preparationTime: "6 minutes",
@@ -170,8 +154,8 @@ export const MealList = [
     id: 5, 
     type: "meat", 
     name: "Croziflette", 
-    cover: croziflette, 
-    thumbnail: crozifletteThumbnail,
+    cover: "croziflette", 
+    thumbnail: "crozifletteThumbnail",
     description: "Remplacez les pommes de terre d'une tartiflette par des crozets au sarrasin, et découvrez la savoureuse croziflette !",
     nutriscore: "D", 
     preparationTime: "7 minutes",
@@ -205,8 +189,8 @@ export const MealList = [
     id: 6, 
     type: "fish", 
     name: "Makis saumon avocat", 
-    cover: salmonAvocadoMakis, 
-    thumbnail: salmonAvocadoMakisThumbnail,
+    cover: "salmonAvocadoMakis", 
+    thumbnail: "salmonAvocadoMakisThumbnail",
     description: "Faites-vous une soirée makis !",
     nutriscore: "C", 
     preparationTime: "10 minutes",
@@ -244,8 +228,8 @@ export const MealList = [
     id: 7, 
     type: "veggie", 
     name: "Curry & boulettes veggie", 
-    cover: curryVeggieBalls, 
-    thumbnail: curryVeggieBallsThumbnail,
+    cover: "curryVeggieBalls", 
+    thumbnail: "curryVeggieBallsThumbnail",
     description: "Des boulettes de légumes au curry : un plat du soir végé idéal avec du riz !",
     nutriscore: "B", 
     preparationTime: "5 minutes",
@@ -278,8 +262,8 @@ export const MealList = [
     id: 8, 
     type: "meat", 
     name: "Burger avocat & lard", 
-    cover: avocadoAndBaconBurger, 
-    thumbnail: avocadoAndBaconBurgerThumbnail,
+    cover: "avocadoAndBaconBurger", 
+    thumbnail: "avocadoAndBaconBurgerThumbnail",
     description: "Rien de plus gourmand qu'un burger avocat et lard pour se réconforter cet hiver !",
     nutriscore: "B", 
     preparationTime: "3 minutes",
@@ -308,3 +292,8 @@ export const MealList = [
 
 
 ]
+
+MealList.forEach((meal) => {
+  meal.cover = `meals/${meal.cover}.png`
+  meal.thumbnail = `meals/${meal.thumbnail}.webp`
+});
