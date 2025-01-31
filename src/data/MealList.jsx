@@ -17,24 +17,38 @@ export const MealList = [
     ustensils: "Casserole, poêle, plaques de cuisson, passoire.", 
     seasoning: "Huile d'olive (1 càc)", 
     ingredients: [
-      ["Pâtes (spaghetti)", 100, "g"],
-      ["Parmesan (râpé)", 1, "càs"],
-      ["Boeuf (steak haché frais)", 1],
-      ["Échalote", 0.25],
-      ["Sauce tomate", 80, "g"],
-      ["Basilic (frais)", 5, "g"],
-      ["Chapelure", 1, "càs"],
-      ["Œuf", 0.25]
-    ], 
-    recipe: [
-      ["Si besoin, faites décongeler les steaks hachés. Émincez l'échalote finement.", ["Échalote"]],
-      ["Dans un récipient ajoutez le boeuf, l'oeuf, la chapelure, l'échalote, la moitié du parmesan/personne, salez, poivrez, malaxez le tout avec les mains.", ["Œuf", "Chapelure", "Parmesan (râpé)", "Boeuf (steak haché frais)"]], 
-      ["Faire des boulettes de 4 cm environ en les roulant entre vos doigts."], 
-      ["Cuire les pâtes selon les instructions du paquet dans une eau salée.", ["Pâtes (spaghetti)"]], 
-      ["Faire revenir les boulettes 5 minutes à la poêle bien chaude avec un filet d'huile d'olive."], 
-      ["En fin de cuisson, baisser le feu au minimum, ajoutez la sauce tomate, 1 cuillère à soupe d'eau/personne et laissez mijoter le temps de la prochaine étape.", "Sauce tomate"], 
-      ["Une fois les pâtes cuites, égouttez-les, puis mélangez-les avec la sauce et les boulettes. Servir avec un peu de parmesan (optionnel : et de basilic frais si vous en avez) sur le dessus. C'est prêt !", ["Basilic (frais)", "Parmesan (râpé)"]]
+      { ingredient: "Pâtes (spaghetti)", quantity: 100, unity: "g" },
+      { ingredient: "Parmesan (râpé)", quantity: 1, unity: "càs" },
+      { ingredient: "Boeuf (steak haché frais)", quantity: 1 },
+      { ingredient: "Échalote", quantity: 0.25 },
+      { ingredient: "Sauce tomate", quantity: 80, unity: "g" },
+      { ingredient: "Basilic (frais)", quantity: 5, unity: "g" },
+      { ingredient: "Chapelure", quantity: 1, unity: "càs" },
+      { ingredient: "Œuf", quantity: 0.25 }
     ]
+    , 
+    recipe: [
+      {
+        step: "Si besoin, faites décongeler les steaks hachés. Émincez l'échalote finement.",
+        ingredient: ["Échalote"]
+      },
+      { step: "Dans un récipient, ajoutez le boeuf, l'œuf, la chapelure, l'échalote, la moitié du parmesan par personne, salez, poivrez, malaxez le tout avec les mains.", ingredient: ["Œuf", "Chapelure", "Parmesan (râpé)", "Boeuf (steak haché frais)"] },
+      { step: "Faire des boulettes de 4 cm environ en les roulant entre vos doigts." },
+      {
+        step: "Cuire les pâtes selon les instructions du paquet dans une eau salée.",
+        ingredient: ["Pâtes (spaghetti)"]
+      },
+      { step: "Faire revenir les boulettes 5 minutes à la poêle bien chaude avec un filet d'huile d'olive." },
+      {
+        step: "En fin de cuisson, baisser le feu au minimum, ajoutez la sauce tomate, 1 cuillère à soupe d'eau par personne et laissez mijoter le temps de la prochaine étape.",
+        ingredient: ["Sauce tomate"]
+      },
+      {
+        step: "Une fois les pâtes cuites, égouttez-les, puis mélangez-les avec la sauce et les boulettes. Servir avec un peu de parmesan (optionnel : et de basilic frais si vous en avez) sur le dessus. C'est prêt !",
+        ingredient: ["Basilic (frais)", "Parmesan (râpé)"]
+      }
+    ]
+    
   },
 
   {
@@ -54,25 +68,58 @@ export const MealList = [
     ustensils: "Four, poêle, plaques de cuisson.", 
     seasoning: "", 
     ingredients: [
-      ["Poireau", 1],
-      ["Pain de mie", 2, "tran."],
-      ["Fromage râpé", 60, "g"],
-      ["Crème fraîche", 30, "g"],
-      ["Parmesan (morceaux)", 1, "càs"],
-      ["Salade (mélange)", 50, "g"],
-      ["Beurre", 5, "g"]
+      { ingredient: "Poireau", quantity: 1 },
+      { ingredient: "Pain de mie", quantity: 2, unity: "tran." },
+      { ingredient: "Fromage râpé", quantity: 60, unity: "g" },
+      { ingredient: "Crème fraîche", quantity: 30, unity: "g" },
+      { ingredient: "Parmesan (morceaux)", quantity: 1, unity: "càs" },
+      { ingredient: "Salade (mélange)", quantity: 50, unity: "g" },
+      { ingredient: "Beurre", quantity: 5, unity: "g" }
     ], 
     recipe: [
-      ["Lavez le poireau et coupez les extrémités pour ne garder que le blanc. Coupez-le en deux dans le sens de la longueur puis émincez finement.", ["Poireau"]],
-      ["Dans une poêle bien chaude, ajoutez une noisette de beurre et le poireau émincé. Faites revenir à feu vif pendant 2 minutes en remuant. Salez et poivrez.", ["Beurre", "Poireau"]], 
-      ["Baissez le feu et laissez mijoter à couvert pendant 8 minutes."], 
-      ["Préchauffez le four à 240°C. Mélangez dans un bol les poireaux cuits, la crème, le parmesan et le fromage râpé (gardez en une petite poignée pour la suite).* Salez et poivrez.", ["Poireau", "Crème fraîche", "Parmesan (morceaux)", "Fromage râpé"]], 
-      ["Beurrez les tranches de pain de mie d'un seul côté.", ["Beurre", "Pain de mie"]], 
-      ["Beurrez un plat allant au four.", ["Beurre"]], 
-      ["Disposez la moitié des tranches côté beurré vers le haut. Ajoutez la farce aux poireaux en réservant une cuillère à soupe par portion."], 
-      ["Refermez avec la seconde tranche de pain, côté beurré sur la farce. Ensuite, recouvrez les sandwichs avec le reste de farce aux poireaux et de fromage râpé. "], 
-      ["Enfournez pendant 10 minutes à 240°C. Servez avec une salade assaisonnée à votre goût, c'est prêt !", ["Salade (mélange)"]]
+      { 
+        step: "Lavez le poireau et coupez les extrémités pour ne garder que le blanc. Coupez-le en deux dans le sens de la longueur puis émincez finement.", 
+        ingredient: ["Poireau"] 
+      },
+    
+      { 
+        step: "Dans une poêle bien chaude, ajoutez une noisette de beurre et le poireau émincé. Faites revenir à feu vif pendant 2 minutes en remuant. Salez et poivrez.", 
+        ingredient: ["Beurre", "Poireau"] 
+      },
+    
+      { 
+        step: "Baissez le feu et laissez mijoter à couvert pendant 8 minutes." 
+      },
+    
+      { 
+        step: "Préchauffez le four à 240°C. Mélangez dans un bol les poireaux cuits, la crème, le parmesan et le fromage râpé (gardez en une petite poignée pour la suite). Salez et poivrez.", 
+        ingredient: ["Poireau", "Crème fraîche", "Parmesan (morceaux)", "Fromage râpé"] 
+      },
+    
+      { 
+        step: "Beurrez les tranches de pain de mie d'un seul côté.", 
+        ingredient: ["Beurre", "Pain de mie"] 
+      },
+    
+      { 
+        step: "Beurrez un plat allant au four.", 
+        ingredient: ["Beurre"] 
+      },
+    
+      { 
+        step: "Disposez la moitié des tranches côté beurré vers le haut. Ajoutez la farce aux poireaux en réservant une cuillère à soupe par portion." 
+      },
+    
+      { 
+        step: "Refermez avec la seconde tranche de pain, côté beurré sur la farce. Ensuite, recouvrez les sandwichs avec le reste de farce aux poireaux et de fromage râpé." 
+      },
+    
+      { 
+        step: "Enfournez pendant 10 minutes à 240°C. Servez avec une salade assaisonnée à votre goût, c'est prêt !", 
+        ingredient: ["Salade (mélange)"] 
+      }
     ]
+    
   }, 
 
   {
@@ -92,24 +139,59 @@ export const MealList = [
     ustensils: "Plaques de cuisson, poêle, casserole, mixeur",
     seasoning: "",
     ingredients: [
-      ["Cabillaud (frais)", 1],
-      ["Chorizo (entier)", 25, "g"],
-      ["Pommes de terre", 250, "g"],
-      ["Crème liquide", 60, "ml"],
-      ["Beurre", 15, "g"],
-      ["Ciboulette", 5, "g"]
+      { ingredient: "Cabillaud (frais)", quantity: 1 },
+      { ingredient: "Chorizo (entier)", quantity: 25, unity: "g" },
+      { ingredient: "Pommes de terre", quantity: 250, unity: "g" },
+      { ingredient: "Crème liquide", quantity: 60, unity: "ml" },
+      { ingredient: "Beurre", quantity: 15, unity: "g" },
+      { ingredient: "Ciboulette", quantity: 5, unity: "g" }
     ], 
     recipe: [
-      ["Épluchez les pommes de terre et coupez-les en petits dés.", ["Pommes de terre"]],
-      ["Faites bouillir une casserole d'eau chaude salée, versez-y les pommes de terre et laissez cuire 15 minutes.", ["Pommes de terre"]], 
-      ["Pendant ce temps, préparez la sauce : après avoir retiré la peau du chorizo, détaillez-le en petits dés.", ["Chorizo (entier)"]], 
-      ["Dans une casserole, versez la crème liquide et les dés de chorizo. Faites chauffer jusqu'à début d’ébullition. Couvrez et laissez infuser une dizaine de minutes à feu doux.", ["Crème liquide", "Chorizo (entier)"]], 
-      ["Pendant ce temps émincez finement la ciboulette si vous en avez.", ["Ciboulette"]], 
-      ["Une fois les pommes de terre cuites, égouttez-les puis versez-les dans un récipient et ajoutez le beurre. Salez et poivrez puis écrasez le tout. Ajoutez la ciboulette si vous en avez. Réservez au chaud.", ["Pommes de terre", "Beurre", "Ciboulette"]], 
-      ["Une fois le chorizo bien infusé, mixez le mélange à l'aide d'un mixeur plongeant.", ["Chorizo (entier)"]], 
-      ["Pour finir, faites cuire votre cabillaud 2 minutes de chaque côté dans une poêle avec un filet d'huile d'olive. Salez et poivrez.", ["Cabillaud (frais)"]], 
-      ["Dressez votre assiette en ajoutant la purée, le cabillaud et nappez de sauce au chorizo. S'il vous en reste, ajoutez quelques brins de ciboulette hachés. C'est prêt !"]
+      { 
+        step: "Épluchez les pommes de terre et coupez-les en petits dés.", 
+        ingredient: ["Pommes de terre"] 
+      },
+    
+      { 
+        step: "Faites bouillir une casserole d'eau chaude salée, versez-y les pommes de terre et laissez cuire 15 minutes.", 
+        ingredient: ["Pommes de terre"] 
+      },
+    
+      { 
+        step: "Pendant ce temps, préparez la sauce : après avoir retiré la peau du chorizo, détaillez-le en petits dés.", 
+        ingredient: ["Chorizo (entier)"] 
+      },
+    
+      { 
+        step: "Dans une casserole, versez la crème liquide et les dés de chorizo. Faites chauffer jusqu'à début d’ébullition. Couvrez et laissez infuser une dizaine de minutes à feu doux.", 
+        ingredient: ["Crème liquide", "Chorizo (entier)"] 
+      },
+    
+      { 
+        step: "Pendant ce temps émincez finement la ciboulette si vous en avez.", 
+        ingredient: ["Ciboulette"] 
+      },
+    
+      { 
+        step: "Une fois les pommes de terre cuites, égouttez-les puis versez-les dans un récipient et ajoutez le beurre. Salez et poivrez puis écrasez le tout. Ajoutez la ciboulette si vous en avez. Réservez au chaud.", 
+        ingredient: ["Pommes de terre", "Beurre", "Ciboulette"] 
+      },
+    
+      { 
+        step: "Une fois le chorizo bien infusé, mixez le mélange à l'aide d'un mixeur plongeant.", 
+        ingredient: ["Chorizo (entier)"] 
+      },
+    
+      { 
+        step: "Pour finir, faites cuire votre cabillaud 2 minutes de chaque côté dans une poêle avec un filet d'huile d'olive. Salez et poivrez.", 
+        ingredient: ["Cabillaud (frais)"] 
+      },
+    
+      { 
+        step: "Dressez votre assiette en ajoutant la purée, le cabillaud et nappez de sauce au chorizo. S'il vous en reste, ajoutez quelques brins de ciboulette hachés. C'est prêt !" 
+      }
     ]
+    
   }, 
 
   {
@@ -129,60 +211,125 @@ export const MealList = [
     ustensils: "Four, plat à gratin.", 
     seasoning: "", 
     ingredients: [
-      ["Pain de mie", 2, "tran."],
-      ["Jambon blanc", 1, "tran."],
-      ["Fromage râpé", 60, "g"],
-      ["Crème fraîche", 30, "g"],
-      ["Parmesan (râpé)", 0.5, "càs"],
-      ["Salade (mélange)", 100, "g"],
-      ["Beurre demi-sel", 5, "g"]
-    ], 
-    recipe: [
-      ["Préchauffez le four à 240°C. Mélangez dans un bol : la crème, le parmesan, et la moitié du fromage râpé, sel et poivre.", ["Crème fraîche", "Parmesan (râpé)", "Fromage râpé" ]],
-      ["Beurrez les tranches de pain de mie d'un seul côté.", ["Pain de mie","Beurre"]], 
-      ["Beurrez un plat allant au four.", ["Beurre"]], 
-      ["Disposez la moitié des tranches côté beurré vers le haut."], 
-      ["Beurrez les tranches de pain de mie d'un seul côté.", ["Beurre", "Pain de mie"]], 
-      ["Beurrez un plat allant au four.", ["Beurre"]], 
-      ["Disposez la moitié des tranches côté beurré vers le haut",  ["Pain de mie"]], 
-      ["Refermez avec la seconde tranche de pain côté beurré sur le jambon, et recouvrez les sandwichs avec le mélange crème-fromage."], 
-      ["Enfournez pendant 10 minutes à 240°C. Servez avec une salade assaisonnée à votre goût, c'est prêt !", ["Salade (mélange)"]]
+      { ingredient: "Pain de mie", quantity: 2, unity: "tran." },
+      { ingredient: "Jambon blanc", quantity: 1, unity: "tran." },
+      { ingredient: "Fromage râpé", quantity: 60, unity: "g" },
+      { ingredient: "Crème fraîche", quantity: 30, unity: "g" },
+      { ingredient: "Parmesan (râpé)", quantity: 0.5, unity: "càs" },
+      { ingredient: "Salade (mélange)", quantity: 100, unity: "g" },
+      { ingredient: "Beurre demi-sel", quantity: 5, unity: "g" }
     ]
+    , 
+    recipe: [
+      { 
+        step: "Préchauffez le four à 240°C. Mélangez dans un bol : la crème, le parmesan, et la moitié du fromage râpé, sel et poivre.", 
+        ingredient: ["Crème fraîche", "Parmesan (râpé)", "Fromage râpé"] 
+      },
+    
+      { 
+        step: "Beurrez les tranches de pain de mie d'un seul côté.", 
+        ingredient: ["Pain de mie", "Beurre"] 
+      },
+    
+      { 
+        step: "Beurrez un plat allant au four.", 
+        ingredient: ["Beurre"] 
+      },
+    
+      { 
+        step: "Disposez la moitié des tranches côté beurré vers le haut." 
+      },
+    
+      { 
+        step: "Beurrez les tranches de pain de mie d'un seul côté.", 
+        ingredient: ["Beurre", "Pain de mie"] 
+      },
+    
+      { 
+        step: "Beurrez un plat allant au four.", 
+        ingredient: ["Beurre"] 
+      },
+    
+      { 
+        step: "Disposez la moitié des tranches côté beurré vers le haut", 
+        ingredient: ["Pain de mie"] 
+      },
+    
+      { 
+        step: "Refermez avec la seconde tranche de pain côté beurré sur le jambon, et recouvrez les sandwichs avec le mélange crème-fromage." 
+      },
+    
+      { 
+        step: "Enfournez pendant 10 minutes à 240°C. Servez avec une salade assaisonnée à votre goût, c'est prêt !", 
+        ingredient: ["Salade (mélange)"] 
+      }
+    ]
+    
   },
 
   {
-    id: 5, 
-    type: "meat", 
-    name: "Croziflette", 
-    cover: "croziflette", 
+    id: 5,
+    type: "meat",
+    name: "Croziflette",
+    cover: "croziflette",
     thumbnail: "crozifletteThumbnail",
     description: "Remplacez les pommes de terre d'une tartiflette par des crozets au sarrasin, et découvrez la savoureuse croziflette !",
-    nutriscore: "D", 
+    nutriscore: "D",
     preparationTime: "7 minutes",
-    cookingTime: "35 minutes", 
-    kcal: "694", 
+    cookingTime: "35 minutes",
+    kcal: "694",
     proteins: "28g",
-    carbohydrates: "60g", 
-    lipids: "37g", 
-    ustensils: "Plaques de cuisson, four, casserole, passoire, poêle, plat à gratin", 
-    seasoning: "", 
+    carbohydrates: "60g",
+    lipids: "37g",
+    ustensils: "Plaques de cuisson, four, casserole, passoire, poêle, plat à gratin",
+    seasoning: "",
     ingredients: [
-      ["Roblochon", 50, "g"],
-      ["Oignon jaune", 0.25],
-      ["Lardons", 50, "g"],
-      ["Crème fraîche", 1, "càs"],
-      ["Crozets", 80, "g"],
+      { ingredient: "Roblochon", quantity: 50, unity: "g" },
+      { ingredient: "Oignon jaune", quantity: 0.25 },
+      { ingredient: "Lardons", quantity: 50, unity: "g" },
+      { ingredient: "Crème fraîche", quantity: 1, unity: "càs" },
+      { ingredient: "Crozets", quantity: 80, unity: "g" }
     ], 
     recipe: [
-      ["Préchauffez le four à 210°C. Faites cuire les crozets dans une casserole d'eau bouillante pendant 20 minutes.", ["Crozets"]],
-      ["Pendant ce temps, épluchez puis émincez les oignons finement.", ["Oignon jaune"]], 
-      ["Dans une poêle chaude, ajoutez les oignons émincés et les lardons. Faites revenir le tout pendant 10 minutes.", ["Lardons", "Oignon jaune"]], 
-      ["Une fois les crozets cuits, égouttez-les."], 
-      ["Coupez le reblochon en deux.", ["Roblochon"]], 
-      ["Dans un plat à gratin, ajoutez les crozets, la crème fraîche et le mélange lardons/oignons. Salez, poivrez et mélangez bien.", ["Crozets", "Crème fraîche", "Lardons", "Oignon jaune"]], 
-      ["Ajoutez le reblochon par-dessus, puis enfournez 15 minutes à 210°C.",  ["Roblochon"]], 
-      ["Une fois le fromage bien fondu et doré, sortez le plat du four. C'est prêt !"]
+      { 
+        step: "Préchauffez le four à 210°C. Faites cuire les crozets dans une casserole d'eau bouillante pendant 20 minutes.", 
+        ingredient: ["Crozets"] 
+      },
+    
+      { 
+        step: "Pendant ce temps, épluchez puis émincez les oignons finement.", 
+        ingredient: ["Oignon jaune"] 
+      },
+    
+      { 
+        step: "Dans une poêle chaude, ajoutez les oignons émincés et les lardons. Faites revenir le tout pendant 10 minutes.", 
+        ingredient: ["Lardons", "Oignon jaune"] 
+      },
+    
+      { 
+        step: "Une fois les crozets cuits, égouttez-les." 
+      },
+    
+      { 
+        step: "Coupez le reblochon en deux.", 
+        ingredient: ["Roblochon"] 
+      },
+    
+      { 
+        step: "Dans un plat à gratin, ajoutez les crozets, la crème fraîche et le mélange lardons/oignons. Salez, poivrez et mélangez bien.", 
+        ingredient: ["Crozets", "Crème fraîche", "Lardons", "Oignon jaune"] 
+      },
+    
+      { 
+        step: "Ajoutez le reblochon par-dessus, puis enfournez 15 minutes à 210°C.", 
+        ingredient: ["Roblochon"] 
+      },
+    
+      { 
+        step: "Une fois le fromage bien fondu et doré, sortez le plat du four. C'est prêt !" 
+      }
     ]
+    
   }, 
 
   {
@@ -202,26 +349,65 @@ export const MealList = [
     ustensils: "Plaques de cuisson, casserole, économe", 
     seasoning: "", 
     ingredients: [
-      ["Riz (à sushi)", 100, "g"],
-      ["Saumon (surgelé)", 50, "g"],
-      ["Algues nori (feuille)", 2],
-      ["Avocat", 0.25],
-      ["Vinaigre de riz", 15, "ml"],
-      ["Sauce soja salée", 1, "càs"],
-      ["Fromage frais", 1, "càs"]
-    ], 
-    recipe: [
-      ["Rincez le riz à sushi plusieurs fois à l'eau claire, puis faites-le cuire selon les indications du paquet.", ["Riz (à sushi)"]],
-      ["Faites décongeler les filets de saumon (si vous utilisez du saumon frais, pensez à le surgeler avant de réaliser la recette). Depuis leur emballage en plastique ou dans un sachet zip, plongez les filets dans un récipient rempli d'eau à température ambiante. ", ["Saumon (surgelé)"]], 
-      ["Une fois décongelé, enlevez la peau du saumon. Coupez-le en fines lamelles.", ["Saumon (surgelé)"]], 
-      ["Coupez l'avocat en deux. Retirez la peau, puis coupez-le en fines lamelles.", ["Avocat"]], 
-      ["Une fois le riz cuit, ajoutez le vinaigre de riz et mélangez bien le tout délicatement. Transvasez le riz à sushi dans un plat pour qu'il refroidisse.", ["Vinaigre de riz", "Riz (à sushi)"]], 
-      ["Formez vos makis. Déroulez la natte en bambou (ou une feuille de papier sulfurisé) et déposez la feuille d'algue nori par-dessus.", ["Algues nori (feuille)"]], 
-      ["Préparez un petit bol d'eau à coté pour tremper vos doigts dedans, afin d'éviter que le riz ne colle et faciliter le montage de vos makis. Étalez une fine couche de riz sur l'ensemble de la feuille d'algue nori."], 
-      ["Disposez : le fromage frais, les lamelles de saumon et les lamelles d'avocat. Badigeonnez un peu d'eau sur l'extrémité de la feuille de nori pour qu'elle se colle bien.", ["Fromage frais", "Saumon (surgelé)", "Avocat"]], 
-      ["Enroulez le rouleau sur lui-même en appuyant fermement avec vos mains pour qu'il soit bien serré."], 
-      ["Coupez les maki, à l'aide d'un couteau bien aiguisé (pour une meilleurs découpe : réservez au frais 15 à 20 minutes, de façon à ce qu'ils se raffermissent). Servez les makis avec la sauce soja. C'est prêt !", ["Sauce soja salée"]]
+      { ingredient: "Riz (à sushi)", quantity: 100, unity: "g" },
+      { ingredient: "Saumon (surgelé)", quantity: 50, unity: "g" },
+      { ingredient: "Algues nori (feuille)", quantity: 2 },
+      { ingredient: "Avocat", quantity: 0.25 },
+      { ingredient: "Vinaigre de riz", quantity: 15, unity: "ml" },
+      { ingredient: "Sauce soja salée", quantity: 1, unity: "càs" },
+      { ingredient: "Fromage frais", quantity: 1, unity: "càs" }
     ]
+    , 
+    recipe: [
+      { 
+        step: "Rincez le riz à sushi plusieurs fois à l'eau claire, puis faites-le cuire selon les indications du paquet.", 
+        ingredient: ["Riz (à sushi)"] 
+      },
+    
+      { 
+        step: "Faites décongeler les filets de saumon (si vous utilisez du saumon frais, pensez à le surgeler avant de réaliser la recette). Depuis leur emballage en plastique ou dans un sachet zip, plongez les filets dans un récipient rempli d'eau à température ambiante.", 
+        ingredient: ["Saumon (surgelé)"] 
+      },
+    
+      { 
+        step: "Une fois décongelé, enlevez la peau du saumon. Coupez-le en fines lamelles.", 
+        ingredient: ["Saumon (surgelé)"] 
+      },
+    
+      { 
+        step: "Coupez l'avocat en deux. Retirez la peau, puis coupez-le en fines lamelles.", 
+        ingredient: ["Avocat"] 
+      },
+    
+      { 
+        step: "Une fois le riz cuit, ajoutez le vinaigre de riz et mélangez bien le tout délicatement. Transvasez le riz à sushi dans un plat pour qu'il refroidisse.", 
+        ingredient: ["Vinaigre de riz", "Riz (à sushi)"] 
+      },
+    
+      { 
+        step: "Formez vos makis. Déroulez la natte en bambou (ou une feuille de papier sulfurisé) et déposez la feuille d'algue nori par-dessus.", 
+        ingredient: ["Algues nori (feuille)"] 
+      },
+    
+      { 
+        step: "Préparez un petit bol d'eau à côté pour tremper vos doigts dedans, afin d'éviter que le riz ne colle et faciliter le montage de vos makis. Étalez une fine couche de riz sur l'ensemble de la feuille d'algue nori." 
+      },
+    
+      { 
+        step: "Disposez : le fromage frais, les lamelles de saumon et les lamelles d'avocat. Badigeonnez un peu d'eau sur l'extrémité de la feuille de nori pour qu'elle se colle bien.", 
+        ingredient: ["Fromage frais", "Saumon (surgelé)", "Avocat"] 
+      },
+    
+      { 
+        step: "Enroulez le rouleau sur lui-même en appuyant fermement avec vos mains pour qu'il soit bien serré." 
+      },
+    
+      { 
+        step: "Coupez les makis, à l'aide d'un couteau bien aiguisé (pour une meilleure découpe : réservez au frais 15 à 20 minutes, de façon à ce qu'ils se raffermissent). Servez les makis avec la sauce soja. C'est prêt !", 
+        ingredient: ["Sauce soja salée"] 
+      }
+    ]
+    
   },
 
   {
@@ -241,21 +427,41 @@ export const MealList = [
     ustensils: "Casserole, plaques de cuisson, passoire", 
     seasoning: "", 
     ingredients: [
-      ["Boulettes végétales", 80, "g"],
-      ["Riz", 70, "g"],
-      ["Épinards (surgelés)", 100, "g"],
-      ["Lait de coco", 80, "ml"],
-      ["Curry (poudre)", 1, "càs"],
-      ["Sauce soja salée", 1, "càs"],
-      ["Tomate (concentré)", 1, "càs"]
-    ], 
-    recipe: [
-      ["Dans une casserole d’eau bouillante salée, faites cuire le riz selon les instructions du paquet. Égouttez-le en fin de cuisson.", ["Riz"]],
-      ["Pendant ce temps, faites chauffer un filet d'huile d'olive dans une poêle. Ajoutez les épinards surgelés et faites-les revenir à couvert pendant 4 à 5 minutes, sur feu moyen.", ["Épinards (surgelés)"]], 
-      ["Ajoutez le curry et le concentré de tomate, puis mélangez. Ajoutez ensuite le lait de coco. Mélangez puis laissez mijoter 3 à 4 minutes.", ["Curry (poudre)", "Tomate (concentré)", "Lait de coco"]], 
-      ["Ajoutez les boulettes végétales et mélangez. Salez, poivrez, puis laissez mijoter à nouveau 3 à 4 minutes.", ["Boulettes végétales"]], 
-      ["Servez le curry veggie sur le riz. Ré-assaisonnez selon vos goûts, c'est prêt !"]
+      { ingredient: "Boulettes végétales", quantity: 80, unity: "g" },
+      { ingredient: "Riz", quantity: 70, unity: "g" },
+      { ingredient: "Épinards (surgelés)", quantity: 100, unity: "g" },
+      { ingredient: "Lait de coco", quantity: 80, unity: "ml" },
+      { ingredient: "Curry (poudre)", quantity: 1, unity: "càs" },
+      { ingredient: "Sauce soja salée", quantity: 1, unity: "càs" },
+      { ingredient: "Tomate (concentré)", quantity: 1, unity: "càs" }
     ]
+    , 
+    recipe: [
+      { 
+        step: "Dans une casserole d’eau bouillante salée, faites cuire le riz selon les instructions du paquet. Égouttez-le en fin de cuisson.", 
+        ingredient: ["Riz"] 
+      },
+    
+      { 
+        step: "Pendant ce temps, faites chauffer un filet d'huile d'olive dans une poêle. Ajoutez les épinards surgelés et faites-les revenir à couvert pendant 4 à 5 minutes, sur feu moyen.", 
+        ingredient: ["Épinards (surgelés)"] 
+      },
+    
+      { 
+        step: "Ajoutez le curry et le concentré de tomate, puis mélangez. Ajoutez ensuite le lait de coco. Mélangez puis laissez mijoter 3 à 4 minutes.", 
+        ingredient: ["Curry (poudre)", "Tomate (concentré)", "Lait de coco"] 
+      },
+    
+      { 
+        step: "Ajoutez les boulettes végétales et mélangez. Salez, poivrez, puis laissez mijoter à nouveau 3 à 4 minutes.", 
+        ingredient: ["Boulettes végétales"] 
+      },
+    
+      { 
+        step: "Servez le curry veggie sur le riz. Ré-assaisonnez selon vos goûts, c'est prêt !" 
+      }
+    ]
+    
   }, 
 
   {
@@ -275,19 +481,36 @@ export const MealList = [
     ustensils: "Poêle, plaques de cuisson", 
     seasoning: "", 
     ingredients: [
-      ["Pain à burger", 1],
-      ["Lard", 2, "tran."],
-      ["Avocat", 0.5],
-      ["Œuf", 1],
-      ["Ciboulette", 5, "g"], 
-      ["Beurre", 10, "g"]
-    ], 
-    recipe: [
-      ["Coupez les pains à burger en deux. Dans une poêle à feu vif, ajoutez une noisette de beurre et faites toaster, côté mie, les pains à burger pendant 3 minutes.", ["Pain à burger", "Beurre"]],
-      ["Retirez les pains puis ajoutez dans la même poêle les tranches de lard et faites-les griller 2 minutes de chaque côté sur feu vif. Elles doivent devenir presque croustillantes. Débarrassez ensuite sur une feuille de papier essuie-tout.", ["Lard"]], 
-      ["Gardez la même poêle, ajoutez une noisette de beurre et faites cuire les œufs au plat. Salez et poivrez.", ["Beurre", "Œuf"]], 
-      ["Dressez vos burgers. Déposez l'avocat, salez et poivrez. Ajoutez les tranches de lard, l'œuf au plat et de la ciboulette hachée si vous en avez.* Refermez le burger, c'est prêt !", ["Avocat", "Lard", "Œuf", "Ciboulette"]]
+      { ingredient: "Pain à burger", quantity: 1 },
+      { ingredient: "Lard", quantity: 2, unity: "tran." },
+      { ingredient: "Avocat", quantity: 0.5 },
+      { ingredient: "Œuf", quantity: 1 },
+      { ingredient: "Ciboulette", quantity: 5, unity: "g" },
+      { ingredient: "Beurre", quantity: 10, unity: "g" }
     ]
+    , 
+    recipe: [
+      { 
+        step: "Coupez les pains à burger en deux. Dans une poêle à feu vif, ajoutez une noisette de beurre et faites toaster, côté mie, les pains à burger pendant 3 minutes.", 
+        ingredient: ["Pain à burger", "Beurre"] 
+      },
+    
+      { 
+        step: "Retirez les pains puis ajoutez dans la même poêle les tranches de lard et faites-les griller 2 minutes de chaque côté sur feu vif. Elles doivent devenir presque croustillantes. Débarrassez ensuite sur une feuille de papier essuie-tout.", 
+        ingredient: ["Lard"] 
+      },
+    
+      { 
+        step: "Gardez la même poêle, ajoutez une noisette de beurre et faites cuire les œufs au plat. Salez et poivrez.", 
+        ingredient: ["Beurre", "Œuf"] 
+      },
+    
+      { 
+        step: "Dressez vos burgers. Déposez l'avocat, salez et poivrez. Ajoutez les tranches de lard, l'œuf au plat et de la ciboulette hachée si vous en avez. Refermez le burger, c'est prêt !", 
+        ingredient: ["Avocat", "Lard", "Œuf", "Ciboulette"] 
+      }
+    ]
+    
   }
 
 
