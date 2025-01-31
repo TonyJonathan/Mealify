@@ -17,14 +17,14 @@ export const MealList = [
     ustensils: "Casserole, poêle, plaques de cuisson, passoire.", 
     seasoning: "Huile d'olive (1 càc)", 
     ingredients: [
-      { ingredient: "Pâtes (spaghetti)", quantity: 100, unity: "g" },
-      { ingredient: "Parmesan (râpé)", quantity: 1, unity: "càs" },
-      { ingredient: "Boeuf (steak haché frais)", quantity: 1 },
-      { ingredient: "Échalote", quantity: 0.25 },
-      { ingredient: "Sauce tomate", quantity: 80, unity: "g" },
-      { ingredient: "Basilic (frais)", quantity: 5, unity: "g" },
-      { ingredient: "Chapelure", quantity: 1, unity: "càs" },
-      { ingredient: "Œuf", quantity: 0.25 }
+      { name: "Pâtes (spaghetti)", quantity: 100, unity: "g" },
+      { name: "Parmesan (râpé)", quantity: 1, unity: "càs" },
+      { name: "Boeuf (steak haché frais)", quantity: 1 },
+      { name: "Échalote", quantity: 0.25 },
+      { name: "Sauce tomate", quantity: 80, unity: "g" },
+      { name: "Basilic (frais)", quantity: 5, unity: "g" },
+      { name: "Chapelure", quantity: 1, unity: "càs" },
+      { name: "Œuf", quantity: 0.25 }
     ]
     , 
     recipe: [
@@ -68,13 +68,13 @@ export const MealList = [
     ustensils: "Four, poêle, plaques de cuisson.", 
     seasoning: "", 
     ingredients: [
-      { ingredient: "Poireau", quantity: 1 },
-      { ingredient: "Pain de mie", quantity: 2, unity: "tran." },
-      { ingredient: "Fromage râpé", quantity: 60, unity: "g" },
-      { ingredient: "Crème fraîche", quantity: 30, unity: "g" },
-      { ingredient: "Parmesan (morceaux)", quantity: 1, unity: "càs" },
-      { ingredient: "Salade (mélange)", quantity: 50, unity: "g" },
-      { ingredient: "Beurre", quantity: 5, unity: "g" }
+      { name: "Poireau", quantity: 1 },
+      { name: "Pain de mie", quantity: 2, unity: "tran." },
+      { name: "Fromage râpé", quantity: 60, unity: "g" },
+      { name: "Crème fraîche", quantity: 30, unity: "g" },
+      { name: "Parmesan (morceaux)", quantity: 1, unity: "càs" },
+      { name: "Salade (mélange)", quantity: 50, unity: "g" },
+      { name: "Beurre", quantity: 5, unity: "g" }
     ], 
     recipe: [
       { 
@@ -139,12 +139,12 @@ export const MealList = [
     ustensils: "Plaques de cuisson, poêle, casserole, mixeur",
     seasoning: "",
     ingredients: [
-      { ingredient: "Cabillaud (frais)", quantity: 1 },
-      { ingredient: "Chorizo (entier)", quantity: 25, unity: "g" },
-      { ingredient: "Pommes de terre", quantity: 250, unity: "g" },
-      { ingredient: "Crème liquide", quantity: 60, unity: "ml" },
-      { ingredient: "Beurre", quantity: 15, unity: "g" },
-      { ingredient: "Ciboulette", quantity: 5, unity: "g" }
+      { name: "Cabillaud (frais)", quantity: 1 },
+      { name: "Chorizo (entier)", quantity: 25, unity: "g" },
+      { name: "Pommes de terre", quantity: 250, unity: "g" },
+      { name: "Crème liquide", quantity: 60, unity: "ml" },
+      { name: "Beurre", quantity: 15, unity: "g" },
+      { name: "Ciboulette", quantity: 5, unity: "g" }
     ], 
     recipe: [
       { 
@@ -211,13 +211,13 @@ export const MealList = [
     ustensils: "Four, plat à gratin.", 
     seasoning: "", 
     ingredients: [
-      { ingredient: "Pain de mie", quantity: 2, unity: "tran." },
-      { ingredient: "Jambon blanc", quantity: 1, unity: "tran." },
-      { ingredient: "Fromage râpé", quantity: 60, unity: "g" },
-      { ingredient: "Crème fraîche", quantity: 30, unity: "g" },
-      { ingredient: "Parmesan (râpé)", quantity: 0.5, unity: "càs" },
-      { ingredient: "Salade (mélange)", quantity: 100, unity: "g" },
-      { ingredient: "Beurre demi-sel", quantity: 5, unity: "g" }
+      { name: "Pain de mie", quantity: 2, unity: "tran." },
+      { name: "Jambon blanc", quantity: 1, unity: "tran." },
+      { name: "Fromage râpé", quantity: 60, unity: "g" },
+      { name: "Crème fraîche", quantity: 30, unity: "g" },
+      { name: "Parmesan (râpé)", quantity: 0.5, unity: "càs" },
+      { name: "Salade (mélange)", quantity: 100, unity: "g" },
+      { name: "Beurre demi-sel", quantity: 5, unity: "g" }
     ]
     , 
     recipe: [
@@ -284,11 +284,11 @@ export const MealList = [
     ustensils: "Plaques de cuisson, four, casserole, passoire, poêle, plat à gratin",
     seasoning: "",
     ingredients: [
-      { ingredient: "Roblochon", quantity: 50, unity: "g" },
-      { ingredient: "Oignon jaune", quantity: 0.25 },
-      { ingredient: "Lardons", quantity: 50, unity: "g" },
-      { ingredient: "Crème fraîche", quantity: 1, unity: "càs" },
-      { ingredient: "Crozets", quantity: 80, unity: "g" }
+      { name: "Roblochon", quantity: 50, unity: "g" },
+      { name: "Oignon jaune", quantity: 0.25 },
+      { name: "Lardons", quantity: 50, unity: "g" },
+      { name: "Crème fraîche", quantity: 1, unity: "càs" },
+      { name: "Crozets", quantity: 80, unity: "g" }
     ], 
     recipe: [
       { 
@@ -349,13 +349,13 @@ export const MealList = [
     ustensils: "Plaques de cuisson, casserole, économe", 
     seasoning: "", 
     ingredients: [
-      { ingredient: "Riz (à sushi)", quantity: 100, unity: "g" },
-      { ingredient: "Saumon (surgelé)", quantity: 50, unity: "g" },
-      { ingredient: "Algues nori (feuille)", quantity: 2 },
-      { ingredient: "Avocat", quantity: 0.25 },
-      { ingredient: "Vinaigre de riz", quantity: 15, unity: "ml" },
-      { ingredient: "Sauce soja salée", quantity: 1, unity: "càs" },
-      { ingredient: "Fromage frais", quantity: 1, unity: "càs" }
+      { name: "Riz (à sushi)", quantity: 100, unity: "g" },
+      { name: "Saumon (surgelé)", quantity: 50, unity: "g" },
+      { name: "Algues nori (feuille)", quantity: 2 },
+      { name: "Avocat", quantity: 0.25 },
+      { name: "Vinaigre de riz", quantity: 15, unity: "ml" },
+      { name: "Sauce soja salée", quantity: 1, unity: "càs" },
+      { name: "Fromage frais", quantity: 1, unity: "càs" }
     ]
     , 
     recipe: [
@@ -427,13 +427,13 @@ export const MealList = [
     ustensils: "Casserole, plaques de cuisson, passoire", 
     seasoning: "", 
     ingredients: [
-      { ingredient: "Boulettes végétales", quantity: 80, unity: "g" },
-      { ingredient: "Riz", quantity: 70, unity: "g" },
-      { ingredient: "Épinards (surgelés)", quantity: 100, unity: "g" },
-      { ingredient: "Lait de coco", quantity: 80, unity: "ml" },
-      { ingredient: "Curry (poudre)", quantity: 1, unity: "càs" },
-      { ingredient: "Sauce soja salée", quantity: 1, unity: "càs" },
-      { ingredient: "Tomate (concentré)", quantity: 1, unity: "càs" }
+      { name: "Boulettes végétales", quantity: 80, unity: "g" },
+      { name: "Riz", quantity: 70, unity: "g" },
+      { name: "Épinards (surgelés)", quantity: 100, unity: "g" },
+      { name: "Lait de coco", quantity: 80, unity: "ml" },
+      { name: "Curry (poudre)", quantity: 1, unity: "càs" },
+      { name: "Sauce soja salée", quantity: 1, unity: "càs" },
+      { name: "Tomate (concentré)", quantity: 1, unity: "càs" }
     ]
     , 
     recipe: [
@@ -481,12 +481,12 @@ export const MealList = [
     ustensils: "Poêle, plaques de cuisson", 
     seasoning: "", 
     ingredients: [
-      { ingredient: "Pain à burger", quantity: 1 },
-      { ingredient: "Lard", quantity: 2, unity: "tran." },
-      { ingredient: "Avocat", quantity: 0.5 },
-      { ingredient: "Œuf", quantity: 1 },
-      { ingredient: "Ciboulette", quantity: 5, unity: "g" },
-      { ingredient: "Beurre", quantity: 10, unity: "g" }
+      { name: "Pain à burger", quantity: 1 },
+      { name: "Lard", quantity: 2, unity: "tran." },
+      { name: "Avocat", quantity: 0.5 },
+      { name: "Œuf", quantity: 1 },
+      { name: "Ciboulette", quantity: 5, unity: "g" },
+      { name: "Beurre", quantity: 10, unity: "g" }
     ]
     , 
     recipe: [

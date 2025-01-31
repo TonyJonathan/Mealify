@@ -13,10 +13,10 @@ function IngredientsSection({ servingsNumber, setServingsNumber, meal }) {
       </div>
       <div className="div-ingredients">
         {meal.ingredients.map((ingredient) => 
-          <div className="div-individual-ingredient" key={ingredient[0]}>
-            <img src={getImagePath(ingredient[0])} alt={ingredient[0]}></img>
-            <p>{Conversion(ingredient[1], ingredient[2], servingsNumber)}</p>
-            <p>{ingredient[0]}</p>
+          <div className="div-individual-ingredient" key={ingredient.name}>
+            <img src={getImagePath(ingredient.name)} alt={ingredient.name}></img>
+            <p>{Conversion(ingredient.quantity, ingredient.unity, servingsNumber)}</p>
+            <p>{ingredient.name}</p>
           </div>
         )}
       </div>

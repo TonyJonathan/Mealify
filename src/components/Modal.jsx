@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/Modal.css" // Styles pour le modal
-import { ingredients, getImagePath } from "./Ingredients"
 import DishInfo from "./DishInfo";
 import IngredientsSection from "./IngredientsSection";
 import RecipeSection from "./RecipeSection";
