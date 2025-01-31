@@ -6,18 +6,20 @@ import Conversion from "./Conversion"
 import { getImagePath } from "./Ingredients"
 
 function IngredientList({ isOpen, onClose, addToMenu }) {
+  
   const list = [];
   addToMenu.forEach((dish) => {
     const meal = MealList.find((mealItem) => mealItem.name === dish.name);
     if (meal) {
-      meal.ingredients.forEach((ingredient) => {
-        const [name, quantity, unit] = ingredient; 
-        const existingIngredient = list.find((item) => item[0] === name); 
-        existingIngredient ? (existingIngredient[1] += (Number(quantity) * dish.quantity)) :
-          list.push([name, Number(quantity) * dish.quantity, unit])
+      meal.ingredients.forEach((ingredient) => { 
+        const existingIngredient = list.find((item) => item[0] === ingredient.name); 
+        existingIngredient ? (existingIngredient[1] += (Number(ingredient.quantity) * dish.quantity)) :
+          list.push([ingredient.name, Number(ingredient.quantity) * dish.quantity, ingredient.unity])
       });
     }
   });
+
+  
 
 
   if (!isOpen) return null; 
@@ -31,10 +33,11 @@ function IngredientList({ isOpen, onClose, addToMenu }) {
         </button>
           <p className="title-list">Liste des ingrédients</p>
           {list.map((ingredient) => {
+            const [name, quantity, unity] = ingredient; 
             return (
-              <div className="ingredient" key={ingredient[0]}>
-                <img src={getImagePath(ingredient[0])} alt={ingredient[0]} />
-                <p>{ingredient[0]}: {Conversion(ingredient[1], ingredient[2], 1)}</p>
+              <div className="ingredient" key={name}>
+                <img src={getImagePath(name)} alt={name} />
+                <p>{name}: {Conversion(quantity, unity, 1)}</p>
               </div>
             )
           })}

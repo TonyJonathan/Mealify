@@ -19,6 +19,7 @@ const ingredients = {
   "Parmesan (morceaux)": "parmesanChunks",
   "Salade (mélange)": "mixedSalad",
   "Beurre": "butter",
+  "Beurre demi-sel": "butter",
   "Cabillaud (frais)": "cod",
   "Chorizo (entier)": "chorizo",
   "Pommes de terre": "potatoes",
