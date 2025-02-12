@@ -3,8 +3,11 @@ import "../styles/Cart.css"
 import { MealList } from "../data/MealList"
 import AddDish from "./AddDish"
 import React, { useEffect, useState } from 'react'
+import { useMenu } from "./MenuContext"  
 
-function Cart({ isOpen, onClose, addToMenu, setAddToMenu, setOpenList }) {
+
+function Cart({ isOpen, onClose, setOpenList }) {
+  const { addToMenu, setAddToMenu } = useMenu();
   const [showOverlay, setShowOverlay] = useState(false);
   
   useEffect(() => {

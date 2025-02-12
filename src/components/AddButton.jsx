@@ -1,7 +1,10 @@
 import AddDish from "./AddDish"
 import React from "react"
+import { useMenu } from "./MenuContext"  
 
-function AddButton({ meal, addToMenu, setAddToMenu }) {
+
+function AddButton({ meal }) {  
+  const { addToMenu, setAddToMenu } = useMenu();
   const mealNumber = (meal) => {
     const dish = addToMenu.find((dish) => dish.name === meal.name)
     return dish ? dish.quantity : 0

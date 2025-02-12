@@ -7,8 +7,9 @@ import Cart from "./Cart.jsx"
 import IngredientList from "./IngredientsList.jsx"
 import { useMenu } from "./MenuContext"  
 
+
 function Banner({ searchValue, setSearchValue }) {
-  const { addToMenu, setAddToMenu } = useMenu();
+  const { addToMenu } = useMenu();
   const [openCart, setOpenCart] = useState(null); 
   const [openList, setOpenList] = useState(null)
   const mealNumber = addToMenu.reduce((total, meal) => total + Number(meal.quantity), 0)
@@ -36,8 +37,8 @@ function Banner({ searchValue, setSearchValue }) {
         </div>
       </div>
       <div className="line"></div>
-      <Cart isOpen={openCart} onClose={() => setOpenCart(null)} addToMenu={addToMenu} setAddToMenu={setAddToMenu} setOpenList={setOpenList} />
-      {openList ? <IngredientList isOpen={openList} onClose={() => setOpenList(null)} addToMenu={addToMenu} /> : null}
+      <Cart isOpen={openCart} onClose={() => setOpenCart(null)}  setOpenList={setOpenList} />
+      {openList ? <IngredientList isOpen={openList} onClose={() => setOpenList(null)} /> : null}
     </>
   )
 }

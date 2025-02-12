@@ -4,9 +4,12 @@ import "../styles/IngredientsList.css"
 import { MealList } from "../data/MealList"
 import Conversion from "./Conversion"
 import { getImagePath } from "./Ingredients"
+import { useMenu } from "./MenuContext"  
 
-function IngredientList({ isOpen, onClose, addToMenu }) {
-  
+
+
+function IngredientList({ isOpen, onClose }) {
+  const { addToMenu } = useMenu();
   const list = [];
   addToMenu.forEach((dish) => {
     const meal = MealList.find((mealItem) => mealItem.name === dish.name);

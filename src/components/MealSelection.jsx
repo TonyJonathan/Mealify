@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Modal from "./Modal";
 import "../styles/Modal.css"
 import AddButton from "./AddButton"
-import { useMenu } from "./MenuContext"  
 
 
 const mealType = {
@@ -14,8 +13,6 @@ const mealType = {
 }
 
 function MealSelection({ activeSelection, searchValue }) {
-  
-  const { addToMenu, setAddToMenu } = useMenu();
   const [openMealId, setOpenMealId] = useState(null);
   const [servingsNumber, setServingsNumber] = useState(1);
   
@@ -34,7 +31,7 @@ function MealSelection({ activeSelection, searchValue }) {
               </img>
               <div>
                 {openMealId === meal.id ? (
-                  <Modal isOpen={openMealId} onClose={() => setOpenMealId(null)} meal={meal} servingsNumber={servingsNumber} setServingsNumber={setServingsNumber} addToMenu={addToMenu} setAddToMenu={setAddToMenu}  />
+                  <Modal isOpen={openMealId} onClose={() => setOpenMealId(null)} meal={meal} servingsNumber={servingsNumber} setServingsNumber={setServingsNumber}  />
                 )
                   : null
                 }
@@ -46,7 +43,7 @@ function MealSelection({ activeSelection, searchValue }) {
                   <p className="nutritionalValues">Glucides {meal.carbohydrates}</p>
                   <p className="nutritionalValues">Graisses {meal.lipids}</p>
               </div>
-                <AddButton meal={meal} addToMenu={addToMenu} setAddToMenu={setAddToMenu} />
+                <AddButton meal={meal} />
               </div>
         )}
       </div>

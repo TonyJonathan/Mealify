@@ -4,8 +4,11 @@ import DishInfo from "./DishInfo";
 import IngredientsSection from "./IngredientsSection";
 import RecipeSection from "./RecipeSection";
 import AddDish from "./AddDish"
+import { useMenu } from "./MenuContext"  
 
-function Modal({ isOpen, onClose, meal, servingsNumber, setServingsNumber, addToMenu, setAddToMenu }) {
+
+function Modal({ isOpen, onClose, meal, servingsNumber, setServingsNumber }) {
+  const { addToMenu, setAddToMenu } = useMenu();
 
   if (!isOpen) return null; 
  
