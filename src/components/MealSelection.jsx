@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Modal from "./Modal";
 import "../styles/Modal.css"
 import AddButton from "./AddButton"
+import { useMenu } from "./MenuContext"  
+
 
 const mealType = {
   "VÉGÉ 🥗": "veggie", 
@@ -11,7 +13,9 @@ const mealType = {
   "POISSON 🐠": "fish"
 }
 
-function MealSelection({ activeSelection, searchValue, addToMenu, setAddToMenu }) {
+function MealSelection({ activeSelection, searchValue }) {
+  
+  const { addToMenu, setAddToMenu } = useMenu();
   const [openMealId, setOpenMealId] = useState(null);
   const [servingsNumber, setServingsNumber] = useState(1);
   

@@ -5,8 +5,10 @@ import cuterly from "../assets/icons/cuterly.svg"
 import React, { useState } from 'react'
 import Cart from "./Cart.jsx"
 import IngredientList from "./IngredientsList.jsx"
+import { useMenu } from "./MenuContext"  
 
-function Banner({ searchValue, setSearchValue, addToMenu, setAddToMenu }) {
+function Banner({ searchValue, setSearchValue }) {
+  const { addToMenu, setAddToMenu } = useMenu();
   const [openCart, setOpenCart] = useState(null); 
   const [openList, setOpenList] = useState(null)
   const mealNumber = addToMenu.reduce((total, meal) => total + Number(meal.quantity), 0)
