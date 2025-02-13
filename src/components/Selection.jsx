@@ -1,38 +1,37 @@
-import "../styles/Selection.css"
-import React from "react"
+import "../styles/Selection.css";
+import React from "react";
 
-function Selection({ activeSelection, setActiveSelection }) {
-  
-  const buttons = ["TOUS 🍽️", "VIANDES 🥩", "POISSON 🐠", "VÉGÉ 🥗"]; 
-  const selectOptions = []; 
-  for (let i = 0; i < buttons.length; i++){
-    selectOptions.push(<option key={i + 1}>{buttons[i]}</option>)
+function Selection({ activeSelection, setActiveSelection, selectionStates }) {
+  const buttons = selectionStates;
+  console.log(selectionStates);
+  const selectOptions = [];
+  for (let i = 0; i < buttons.length; i++) {
+    selectOptions.push(<option key={i + 1}>{buttons[i]}</option>);
   }
 
   return (
     <>
-    <div className="selectionList">
-    {buttons.map((label, index) => (
-      <button
-        key={index}
-        className={`selectionButtons ${activeSelection === label ? "active" : ""}`}
-        onClick={() => setActiveSelection(label)}
-      >
-        {label}
-      </button>
-    ))}
+      <div className="selectionList">
+        {buttons.map((button, index) => (
+          <button
+            key={index}
+            className={`selectionButtons ${activeSelection.value === button.value ? "active" : ""}`}
+            onClick={() => setActiveSelection(button)}
+          >
+            {button.label}
+          </button>
+        ))}
       </div>
       <select
-        value={activeSelection}
-        onChange={(e) => setActiveSelection(e.target.value)}
+        value={JSON.stringify(activeSelection)}
+        onChange={(e) => setActiveSelection(JSON.parse(e.target.value))}
         className="select"
       >
-        {selectOptions}
+        {selectOptions.label}
       </select>
       <div className="separationLine"></div>
-      </>
-);
+    </>
+  );
 }
 
-
-export default Selection
+export default Selection;
