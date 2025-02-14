@@ -6,12 +6,12 @@ const decimalConversion = {
   0.66: "2/3"
 }
 
-const unityConversion = {
+const conversion = {
   "ml": "L", 
   "g": "kg"
 }
 
-function Conversion(number, quantity, servingsNumber) {
+function unitConvert(number, quantity, servingsNumber) {
   number = number * servingsNumber; 
 
   if (number < 1)
@@ -23,11 +23,11 @@ function Conversion(number, quantity, servingsNumber) {
     return number; 
   } else if ((number > 999 && quantity === "ml") || (number > 999 && quantity === "g"))
   {
-    return `${number / 1000} ${unityConversion[quantity]}`;
+    return `${number / 1000} ${conversion[quantity]}`;
   } else
   {
     return `${number} ${quantity}`; 
   }
 }
 
-export default Conversion 
+export default unitConvert 

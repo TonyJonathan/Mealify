@@ -14,7 +14,6 @@ function MealSelection({ activeSelection, searchValue }) {
     if (activeSelection.value === "all") return true;
     return (
       meal.type === activeSelection.value &&
-      // Compare with text input
       meal.name.toLowerCase().includes(searchValue.toLowerCase())
     );
   });
