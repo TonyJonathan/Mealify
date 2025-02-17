@@ -1,16 +1,16 @@
-import "../styles/Modal.css";
-import React from "react";
-import "../styles/IngredientsList.css";
-import { MealList } from "../data/MealList";
-import unitConvert from "./unitConvert";
-import { getImagePath } from "./Ingredients";
-import { useMenu } from "./MenuContext";
+import "../styles/Modal.css"
+import React from "react"
+import "../styles/IngredientsList.css"
+import { MealList } from "../data/MealList"
+import unitConvert from "./unitConvert"
+import { getImagePath } from "./Ingredients"
+import { useMenu } from "./MenuContext"
 
 function IngredientList({ isOpen, onClose }) {
-  const { addToMenu } = useMenu();
-  const list = [];
+  const { addToMenu } = useMenu()
+  const list = []
   addToMenu.forEach((dish) => {
-    const meal = MealList.find((mealItem) => mealItem.name === dish.name);
+    const meal = MealList.find((mealItem) => mealItem.name === dish.name)
     if (meal) {
       meal.ingredients.forEach((ingredient) => {
         const existingIngredient = list.find((item) => item[0] === ingredient.name);
@@ -20,12 +20,12 @@ function IngredientList({ isOpen, onClose }) {
               ingredient.name,
               Number(ingredient.quantity) * dish.quantity,
               ingredient.unity
-            ]);
-      });
+            ])
+      })
     }
-  });
+  })
 
-  if (!isOpen) return null;
+  if (!isOpen) return null
 
   return (
     <div className="modal-overlay" onClick={onClose}>
@@ -44,12 +44,12 @@ function IngredientList({ isOpen, onClose }) {
                   {name}: {unitConvert(quantity, unity, 1)}
                 </p>
               </div>
-            );
+            )
           })}
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export default IngredientList;

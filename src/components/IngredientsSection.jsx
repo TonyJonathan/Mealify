@@ -1,7 +1,7 @@
-import unitConvert from "./unitConvert";
-import Dropdown from "./Dropdown";
-import React from "react";
-import { getImagePath } from "./Ingredients";
+import unitConvert from "./unitConvert"
+import Dropdown from "./Dropdown"
+import React from "react"
+import { getImagePath } from "./Ingredients"
 
 function IngredientsSection({ servingsNumber, setServingsNumber, meal }) {
   return (
@@ -24,7 +24,7 @@ function IngredientsSection({ servingsNumber, setServingsNumber, meal }) {
         <p className="text-sections">{meal.ustensils}</p>
       </div>
     </>
-  );
+  )
 }
 
 export default IngredientsSection;

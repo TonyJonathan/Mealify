@@ -23,10 +23,10 @@ function unitConvert(number, quantity, servingsNumber) {
     return number; 
   } else if ((number > 999 && quantity === "ml") || (number > 999 && quantity === "g"))
   {
-    return `${number / 1000} ${conversion[quantity]}`;
+    return `${number / 1000} ${conversion[quantity]}`
   } else
   {
-    return `${number} ${quantity}`; 
+    return `${number} ${quantity}`
   }
 }
 

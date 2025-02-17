@@ -1,22 +1,22 @@
-import { MealList } from "../data/MealList";
+import { MealList } from "../data/MealList"
 import "../styles/MealSelection.css"
-import React, { useState } from "react";
-import Modal from "./Modal";
+import React, { useState } from "react"
+import Modal from "./Modal"
 import "../styles/Modal.css"
 import AddButton from "./AddButton"
 
 
 function MealSelection({ activeSelection, searchValue }) {
-  const [openMealId, setOpenMealId] = useState(null);
-  const [servingsNumber, setServingsNumber] = useState(1);
+  const [openMealId, setOpenMealId] = useState(null)
+  const [servingsNumber, setServingsNumber] = useState(1)
 
   const filteredMeals = MealList.filter((meal) => {
     if (activeSelection.value === "all") return true;
     return (
       meal.type === activeSelection.value &&
       meal.name.toLowerCase().includes(searchValue.toLowerCase())
-    );
-  });
+    )
+  })
 
   return (
     <div className="container">
@@ -50,7 +50,7 @@ function MealSelection({ activeSelection, searchValue }) {
         </div>
       ))}
     </div>
-  );
+  )
 }
 
 export default MealSelection
