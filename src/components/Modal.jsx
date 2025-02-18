@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import "../styles/Modal.css" 
 import DishInfo from "./DishInfo"
 import IngredientsSection from "./IngredientsSection"
@@ -7,8 +7,9 @@ import AddDish from "./AddDish"
 import { useMenu } from "./MenuContext"  
 
 
-function Modal({ isOpen, onClose, meal, servingsNumber, setServingsNumber }) {
+function Modal({ isOpen, onClose, meal }) {
   const { addToMenu, setAddToMenu } = useMenu()
+  const [servingsNumber, setServingsNumber] = useState(1)
 
   if (!isOpen) return null
  

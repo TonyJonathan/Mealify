@@ -12,7 +12,6 @@ function MealSelection() {
   const { searchValue } = useSearch()
   const { activeSelection } = useSelection()
   const [openMealId, setOpenMealId] = useState(null)
-  const [servingsNumber, setServingsNumber] = useState(1)
 
   const filteredMeals = MealList.filter((meal) => {
     if (activeSelection.value === "all") return meal.name.toLowerCase().includes(searchValue.toLowerCase())
@@ -38,8 +37,6 @@ function MealSelection() {
                 isOpen={openMealId}
                 onClose={() => setOpenMealId(null)}
                 meal={meal}
-                servingsNumber={servingsNumber}
-                setServingsNumber={setServingsNumber}
               />
             )}
           </div>
