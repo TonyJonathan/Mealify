@@ -29,7 +29,11 @@ function Selection() {
         onChange={(e) => setActiveSelection(JSON.parse(e.target.value))}
         className="select"
       >
-        {selectOptions.label}
+        {buttons.map((button, index) => (
+          <option key={index} value={JSON.stringify(button)}>
+            {button.label}
+          </option>
+        ))}
       </select>
       <div className="separationLine"></div>
     </>
