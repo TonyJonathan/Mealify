@@ -6,11 +6,13 @@ import React, { useState } from 'react'
 import Cart from "./Cart.jsx"
 import IngredientList from "./IngredientsList.jsx"
 import { useMenu } from "./MenuContext"  
+import { useSearch } from './SearchContext'
 
 
-function Banner({ searchValue, setSearchValue }) {
-  const { addToMenu } = useMenu();
-  const [openCart, setOpenCart] = useState(null); 
+function Banner() {
+  const { searchValue, setSearchValue } = useSearch()
+  const { addToMenu } = useMenu()
+  const [openCart, setOpenCart] = useState(null)
   const [openList, setOpenList] = useState(null)
   const mealNumber = addToMenu.reduce((total, meal) => total + Number(meal.quantity), 0)
   

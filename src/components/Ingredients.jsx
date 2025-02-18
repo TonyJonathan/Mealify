@@ -1,7 +1,7 @@
 const getImagePath = (ingredientKey) => {
-  const fileName = ingredients[ingredientKey];
-  return fileName && `ingredients/${fileName}.webp`;
-};
+  const fileName = ingredients[ingredientKey]
+  return fileName && `ingredients/${fileName}.webp`
+}
 
 
 const ingredients = {
@@ -46,6 +46,6 @@ const ingredients = {
   "Tomate (concentré)": "tomatoPaste",
   "Lard": "bacon",
   "Pain à burger": "burgerBun",
-};
+}
 
-export { ingredients, getImagePath };
+export { ingredients, getImagePath }

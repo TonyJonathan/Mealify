@@ -13,7 +13,7 @@ function IngredientList({ isOpen, onClose }) {
     const meal = MealList.find((mealItem) => mealItem.name === dish.name)
     if (meal) {
       meal.ingredients.forEach((ingredient) => {
-        const existingIngredient = list.find((item) => item[0] === ingredient.name);
+        const existingIngredient = list.find((item) => item[0] === ingredient.name)
         existingIngredient
           ? (existingIngredient[1] += Number(ingredient.quantity) * dish.quantity)
           : list.push([
@@ -36,7 +36,7 @@ function IngredientList({ isOpen, onClose }) {
           </button>
           <p className="title-list">Liste des ingrédients</p>
           {list.map((ingredient) => {
-            const [name, quantity, unity] = ingredient;
+            const [name, quantity, unity] = ingredient
             return (
               <div className="ingredient" key={name}>
                 <img src={getImagePath(name)} alt={name} />
@@ -52,4 +52,4 @@ function IngredientList({ isOpen, onClose }) {
   )
 }
 
-export default IngredientList;
+export default IngredientList

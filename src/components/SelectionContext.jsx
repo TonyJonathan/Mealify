@@ -5,7 +5,7 @@ export const selectionStates = [
   { label: "VIANDES 🥩", value: "meat" },
   { label: "POISSON 🐠", value: "fish" },
   { label: "VÉGÉ 🥗", value: "veggie" }
-];
+]
 
 const SelectionContext = createContext() 
 

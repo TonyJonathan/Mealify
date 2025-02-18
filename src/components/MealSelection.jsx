@@ -5,15 +5,17 @@ import Modal from "./Modal"
 import "../styles/Modal.css"
 import AddButton from "./AddButton"
 import { useSelection } from './SelectionContext'
+import { useSearch } from './SearchContext'
 
 
-function MealSelection({ searchValue }) {
+function MealSelection() {
+  const { searchValue } = useSearch()
   const { activeSelection } = useSelection()
   const [openMealId, setOpenMealId] = useState(null)
   const [servingsNumber, setServingsNumber] = useState(1)
 
   const filteredMeals = MealList.filter((meal) => {
-    if (activeSelection.value === "all") return true;
+    if (activeSelection.value === "all") return meal.name.toLowerCase().includes(searchValue.toLowerCase())
     return (
       meal.type === activeSelection.value &&
       meal.name.toLowerCase().includes(searchValue.toLowerCase())

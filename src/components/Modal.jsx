@@ -1,16 +1,16 @@
-import React from "react";
-import "../styles/Modal.css" // Styles pour le modal
-import DishInfo from "./DishInfo";
-import IngredientsSection from "./IngredientsSection";
-import RecipeSection from "./RecipeSection";
+import React from "react"
+import "../styles/Modal.css" 
+import DishInfo from "./DishInfo"
+import IngredientsSection from "./IngredientsSection"
+import RecipeSection from "./RecipeSection"
 import AddDish from "./AddDish"
 import { useMenu } from "./MenuContext"  
 
 
 function Modal({ isOpen, onClose, meal, servingsNumber, setServingsNumber }) {
-  const { addToMenu, setAddToMenu } = useMenu();
+  const { addToMenu, setAddToMenu } = useMenu()
 
-  if (!isOpen) return null; 
+  if (!isOpen) return null
  
   return (
     <div className="modal-overlay" onClick={onClose}>
@@ -38,7 +38,7 @@ function Modal({ isOpen, onClose, meal, servingsNumber, setServingsNumber }) {
         </button>
       </div>
     </div>
-  );
+  )
 }
 
-export default Modal;
+export default Modal

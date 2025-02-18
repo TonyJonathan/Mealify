@@ -27,4 +27,4 @@ function IngredientsSection({ servingsNumber, setServingsNumber, meal }) {
   )
 }
 
-export default IngredientsSection;
+export default IngredientsSection

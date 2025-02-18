@@ -7,18 +7,18 @@ import { useMenu } from "./MenuContext"
 
 
 function Cart({ isOpen, onClose, setOpenList }) {
-  const { addToMenu, setAddToMenu } = useMenu();
-  const [showOverlay, setShowOverlay] = useState(false);
+  const { addToMenu, setAddToMenu } = useMenu()
+  const [showOverlay, setShowOverlay] = useState(false)
   
   useEffect(() => {
     if (isOpen) {
-      setTimeout(() => setShowOverlay(true), 1); 
+      setTimeout(() => setShowOverlay(true), 1)
     } else {
-      setShowOverlay(false);
+      setShowOverlay(false)
     }
-  }, [isOpen]);
+  }, [isOpen])
 
-  if (!isOpen) return null;
+  if (!isOpen) return null
 
   return (
     <>
@@ -40,8 +40,8 @@ function Cart({ isOpen, onClose, setOpenList }) {
               <p className="title">Votre panier</p>
               <p className="good-choices">Bon choix ! Voici vos plats :</p>
               {addToMenu.map((dish) => {
-                const meal = MealList.find((mealItem) => mealItem.name === dish.name); 
-                const zeroQuantity = - dish.quantity; 
+                const meal = MealList.find((mealItem) => mealItem.name === dish.name)
+                const zeroQuantity = - dish.quantity
                 return meal ? (  
                       <div className="dish-div" key={meal.id}>
                         <img src={meal.thumbnail} alt="meal.name" />
@@ -65,7 +65,7 @@ function Cart({ isOpen, onClose, setOpenList }) {
         </div>
       </div>
     </>
-  );
+  )
 }
 
 export default Cart

@@ -519,4 +519,4 @@ export const MealList = [
 MealList.forEach((meal) => {
   meal.cover = `meals/${meal.cover}.png`
   meal.thumbnail = `meals/${meal.thumbnail}.webp`
-});
+})

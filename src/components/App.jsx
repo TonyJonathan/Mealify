@@ -5,20 +5,18 @@ import MealSelection from './MealSelection'
 import React from "react"
 import { MenuProvider } from "./MenuContext"
 import { SelectionProvider } from './SelectionContext'
-import { SearchProvider, useSearch } from './SearchContext'
+import { SearchProvider } from './SearchContext'
 
 
 function AppContent() {
-  
-  const { searchValue, setSearchValue } = useSearch();
 
   return (
     <>
-      <Banner searchValue={searchValue} setSearchValue={setSearchValue} />
+      <Banner />
         <Selection />
-      <MealSelection searchValue={searchValue} />
+      <MealSelection />
     </>
-  );
+  )
 }
 
 function App() {
@@ -30,7 +28,7 @@ function App() {
         </SelectionProvider>
       </SearchProvider>
     </MenuProvider>
-  );
+  )
 }
 
-export default App;
+export default App

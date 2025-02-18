@@ -12,7 +12,7 @@ const conversion = {
 }
 
 function unitConvert(number, quantity, servingsNumber) {
-  number = number * servingsNumber; 
+  number = number * servingsNumber
 
   if (number < 1)
   {
@@ -20,7 +20,7 @@ function unitConvert(number, quantity, servingsNumber) {
       : decimalConversion[number]
   }
   else if (number >= 1 && quantity === undefined) {
-    return number; 
+    return number
   } else if ((number > 999 && quantity === "ml") || (number > 999 && quantity === "g"))
   {
     return `${number / 1000} ${conversion[quantity]}`

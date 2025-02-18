@@ -1,14 +1,14 @@
-import "../styles/Selection.css";
-import React from "react";
+import "../styles/Selection.css"
+import React from "react"
 import { useSelection, selectionStates } from './SelectionContext'
 
 function Selection() {
   const { activeSelection, setActiveSelection } = useSelection()
-  const buttons = selectionStates;
-  console.log(selectionStates);
-  const selectOptions = [];
+  const buttons = selectionStates
+  console.log(selectionStates)
+  const selectOptions = []
   for (let i = 0; i < buttons.length; i++) {
-    selectOptions.push(<option key={i + 1}>{buttons[i]}</option>);
+    selectOptions.push(<option key={i + 1}>{buttons[i]}</option>)
   }
 
   return (
@@ -33,7 +33,7 @@ function Selection() {
       </select>
       <div className="separationLine"></div>
     </>
-  );
+  )
 }
 
-export default Selection;
+export default Selection
