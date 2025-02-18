@@ -1,7 +1,9 @@
 import "../styles/Selection.css";
 import React from "react";
+import { useSelection, selectionStates } from './SelectionContext'
 
-function Selection({ activeSelection, setActiveSelection, selectionStates }) {
+function Selection() {
+  const { activeSelection, setActiveSelection } = useSelection()
   const buttons = selectionStates;
   console.log(selectionStates);
   const selectOptions = [];

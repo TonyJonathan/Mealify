@@ -4,9 +4,11 @@ import React, { useState } from "react"
 import Modal from "./Modal"
 import "../styles/Modal.css"
 import AddButton from "./AddButton"
+import { useSelection } from './SelectionContext'
 
 
-function MealSelection({ activeSelection, searchValue }) {
+function MealSelection({ searchValue }) {
+  const { activeSelection } = useSelection()
   const [openMealId, setOpenMealId] = useState(null)
   const [servingsNumber, setServingsNumber] = useState(1)
 
