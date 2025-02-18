@@ -2,15 +2,15 @@ import '../styles/App.css'
 import Banner from "./Banner"
 import Selection from "./Selection"
 import MealSelection from './MealSelection'
-import React, { useState } from "react"
+import React from "react"
 import { MenuProvider } from "./MenuContext"
 import { SelectionProvider } from './SelectionContext'
-
+import { SearchProvider, useSearch } from './SearchContext'
 
 
 function AppContent() {
   
-  const [searchValue, setSearchValue] = useState('');
+  const { searchValue, setSearchValue } = useSearch();
 
   return (
     <>
@@ -24,9 +24,11 @@ function AppContent() {
 function App() {
   return (
     <MenuProvider>
-      <SelectionProvider>
-        <AppContent />
-      </SelectionProvider>
+      <SearchProvider>
+        <SelectionProvider>
+          <AppContent />
+        </SelectionProvider>
+      </SearchProvider>
     </MenuProvider>
   );
 }
