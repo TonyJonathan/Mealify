@@ -6,6 +6,7 @@ import RecipeSection from "./RecipeSection";
 import useAddDish from "./addDish";
 import { useServings } from './ServingsContext'
 
+
 function Modal({ isOpen, onClose, meal }) {
   const { servingsNumber, setServingsNumber } = useServings();
   const addDish = useAddDish();
@@ -25,11 +26,7 @@ function Modal({ isOpen, onClose, meal }) {
           ×
         </button>
         <DishInfo meal={meal} />
-        <IngredientsSection
-          servingsNumber={servingsNumber}
-          setServingsNumber={setServingsNumber}
-          meal={meal}
-        />
+        <IngredientsSection meal={meal} />
         <RecipeSection meal={meal} />
         <button
           className="addButton"

@@ -2,8 +2,12 @@ import unitConvert from "./unitConvert"
 import Dropdown from "./Dropdown"
 import React from "react"
 import { getImagePath } from "./Ingredients"
+import { useServings } from './ServingsContext'
 
-function IngredientsSection({ servingsNumber, setServingsNumber, meal }) {
+
+function IngredientsSection({ meal }) {
+  const { servingsNumber, setServingsNumber } = useServings();
+  
   return (
     <>
       <div className="div-ingredients-title">
