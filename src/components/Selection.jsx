@@ -5,7 +5,6 @@ import { useSelection, selectionStates } from './SelectionContext'
 function Selection() {
   const { activeSelection, setActiveSelection } = useSelection()
   const buttons = selectionStates
-  console.log(selectionStates)
   const selectOptions = []
   for (let i = 0; i < buttons.length; i++) {
     selectOptions.push(<option key={i + 1}>{buttons[i]}</option>)
