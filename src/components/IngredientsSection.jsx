@@ -1,13 +1,12 @@
-import unitConvert from "./unitConvert"
-import Dropdown from "./Dropdown"
-import React from "react"
-import { getImagePath } from "./Ingredients"
-import { useServings } from './ServingsContext'
-
+import unitConvert from "./unitConvert";
+import Dropdown from "./Dropdown";
+import React from "react";
+import { getImagePath } from "./Ingredients";
+import { useServings } from "./contexts/ServingsContext";
 
 function IngredientsSection({ meal }) {
   const { servingsNumber, setServingsNumber } = useServings();
-  
+
   return (
     <>
       <div className="div-ingredients-title">
@@ -28,7 +27,7 @@ function IngredientsSection({ meal }) {
         <p className="text-sections">{meal.ustensils}</p>
       </div>
     </>
-  )
+  );
 }
 
-export default IngredientsSection
+export default IngredientsSection;

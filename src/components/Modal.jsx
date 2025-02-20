@@ -4,8 +4,7 @@ import DishInfo from "./DishInfo";
 import IngredientsSection from "./IngredientsSection";
 import RecipeSection from "./RecipeSection";
 import useAddDish from "./addDish";
-import { useServings } from './ServingsContext'
-
+import { useServings } from "./contexts/ServingsContext";
 
 function Modal({ isOpen, onClose, meal }) {
   const { servingsNumber, setServingsNumber } = useServings();

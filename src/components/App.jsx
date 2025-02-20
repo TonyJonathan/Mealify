@@ -1,23 +1,21 @@
-import '../styles/App.css'
-import Banner from "./Banner"
-import Selection from "./Selection"
-import MealSelection from './MealSelection'
-import React from "react"
-import { MenuProvider } from "./MenuContext"
-import { SelectionProvider } from './SelectionContext'
-import { SearchProvider } from './SearchContext'
-import { ServingsProvider } from './ServingsContext'
-
+import "../styles/App.css";
+import Banner from "./Banner";
+import Selection from "./Selection";
+import MealSelection from "./MealSelection";
+import React from "react";
+import { MenuProvider } from "./contexts/MenuContext";
+import { SelectionProvider } from "./contexts/SelectionContext";
+import { SearchProvider } from "./contexts/SearchContext";
+import { ServingsProvider } from "./contexts/ServingsContext";
 
 function AppContent() {
-
   return (
     <>
       <Banner />
-        <Selection />
+      <Selection />
       <MealSelection />
     </>
-  )
+  );
 }
 
 function App() {
@@ -25,13 +23,13 @@ function App() {
     <MenuProvider>
       <SearchProvider>
         <SelectionProvider>
-          <ServingsProvider> 
+          <ServingsProvider>
             <AppContent />
-          </ServingsProvider> 
+          </ServingsProvider>
         </SelectionProvider>
       </SearchProvider>
     </MenuProvider>
-  )
+  );
 }
 
-export default App
+export default App;

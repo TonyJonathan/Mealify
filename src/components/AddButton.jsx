@@ -1,6 +1,6 @@
 import React from "react";
 import useAddDish from "./addDish";
-import { useMenu } from "./MenuContext";
+import { useMenu } from "./contexts/MenuContext";
 
 function AddButton({ meal }) {
   const addDish = useAddDish();
