@@ -6,6 +6,7 @@ import React from "react"
 import { MenuProvider } from "./MenuContext"
 import { SelectionProvider } from './SelectionContext'
 import { SearchProvider } from './SearchContext'
+import { ServingsProvider } from './ServingsContext'
 
 
 function AppContent() {
@@ -24,7 +25,9 @@ function App() {
     <MenuProvider>
       <SearchProvider>
         <SelectionProvider>
-          <AppContent />
+          <ServingsProvider> 
+            <AppContent />
+          </ServingsProvider> 
         </SelectionProvider>
       </SearchProvider>
     </MenuProvider>

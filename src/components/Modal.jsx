@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/Modal.css";
 import DishInfo from "./DishInfo";
 import IngredientsSection from "./IngredientsSection";
 import RecipeSection from "./RecipeSection";
 import useAddDish from "./addDish";
-
+import { useServings } from './ServingsContext'
 
 function Modal({ isOpen, onClose, meal }) {
-  const [servingsNumber, setServingsNumber] = useState(1);
+  const { servingsNumber, setServingsNumber } = useServings();
   const addDish = useAddDish();
 
   if (!isOpen) return null;
